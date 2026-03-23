@@ -160,7 +160,7 @@ var PRODUTOS = [
   // Mais Suportes
   { id: 97, name: "Suporte Celular Chaveiro Portátil", category: "Suportes & Setup", audience: "unissex", price: 15.00, production: "2-3 dias", colors: 15, badge: "", popular: 70, image: "keychain-phone-stand.jpg", icon: "fas fa-mobile-alt", gradient: "gradient-2", creator: "Infill 3D", url: "https://www.printables.com/model/749005-keychain-phone-stand", description: "Suporte de celular portátil como chaveiro", tags: ["celular", "suporte", "chaveiro", "portátil"] },
 
-  // Mais Luminárias
+  // Casa & Utilidades Extras
   { id: 98, name: "Kit Porta-Copos com Caixa", category: "Casa & Utilidades", audience: "unissex", price: 37.50, production: "3-5 dias", colors: 8, badge: "", popular: 66, image: "makerworld-coaster.jpg", icon: "fas fa-glass-whiskey", gradient: "gradient-3", creator: "MakerWorld", url: "https://makerworld.com/en/models/115508-makerworld-coaster", description: "Set de 6 porta-copos com caixa organizadora", tags: ["coaster", "porta-copos", "set", "caixa"] },
   { id: 99, name: "Suporte Vertical Porta-Copos", category: "Casa & Utilidades", audience: "unissex", price: 21.00, production: "2-3 dias", colors: 10, badge: "", popular: 64, image: "coaster-holder-et3dp.jpg", icon: "fas fa-glass-whiskey", gradient: "gradient-4", creator: "ET3DP", url: "https://makerworld.com/en/models/727459", description: "Suporte vertical para porta-copos empilhados", tags: ["coaster", "suporte", "vertical"] },
 
