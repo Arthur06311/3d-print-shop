@@ -195,8 +195,6 @@
           <p><strong>Material:</strong> PLA (Ácido Poliláctico) de alta qualidade</p>
           <p><strong>Resolução de impressão:</strong> 0.2mm (camadas)</p>
           <p><strong>Preenchimento:</strong> 20% (padrão)</p>
-          <p id="specWeight"><strong>Peso aproximado:</strong></p>
-          <p id="specPrice"><strong>Preço por grama:</strong> R$ 1,50/g</p>
           <p id="specColors"><strong>Cores disponíveis:</strong></p>
           <p id="specProduction"><strong>Produção:</strong></p>
         </div>
@@ -286,8 +284,7 @@
     document.title = product.name + ' | 3D Print Shop';
     document.getElementById('breadcrumbName').textContent = product.name;
     document.getElementById('productTitle').textContent = product.name;
-    var weight = Math.round(product.price / 1.5);
-    document.getElementById('productPrice').innerHTML = 'R$ ' + product.price.toFixed(2).replace('.', ',') + ' <small style="color:var(--dark-gray);font-weight:400;font-size:0.7em">(' + weight + 'g &middot; R$1,50/g)</small>';
+    document.getElementById('productPrice').innerHTML = 'R$ ' + product.price.toFixed(2).replace('.', ',');
     document.getElementById('productDesc').textContent = product.description;
     document.getElementById('productColors').textContent = product.colors + ' cores';
     document.getElementById('productCategory').textContent = product.category;
@@ -317,7 +314,6 @@
 
     // Tabs
     document.getElementById('tabDescText').textContent = product.description;
-    document.getElementById('specWeight').innerHTML = '<strong>Peso aproximado:</strong> ~' + weight + 'g';
     document.getElementById('specColors').innerHTML = '<strong>Cores disponíveis:</strong> ' + product.colors + ' cores';
     document.getElementById('specProduction').innerHTML = '<strong>Produção:</strong> ' + product.production;
 
