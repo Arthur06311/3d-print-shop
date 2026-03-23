@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Loja de impressões 3D personalizadas. Peças úteis, criativas e com acabamento caprichado. Envio para todo o Brasil.">
+  <title>3D Print Shop | Impressões 3D Criativas e Personalizadas</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">
+        <i class="fas fa-cube"></i>
+        <span>3D Print Shop</span>
+      </a>
+
+      <nav class="nav-desktop">
+        <a href="index.html" class="active">Início</a>
+        <a href="loja.html">Loja</a>
+        <div class="nav-dropdown">
+          <a href="categoria.html">Categorias <i class="fas fa-chevron-down" style="font-size:0.65rem;margin-left:4px"></i></a>
+          <div class="nav-dropdown-menu">
+            <a href="categoria.html"><i class="fas fa-puzzle-piece"></i> Desk Toys & Fidgets</a>
+            <a href="categoria.html"><i class="fas fa-desktop"></i> Organização & Setup</a>
+            <a href="categoria.html"><i class="fas fa-lightbulb"></i> Decoração & Luminárias</a>
+            <a href="categoria.html"><i class="fas fa-paint-brush"></i> Personalizados</a>
+          </div>
+        </div>
+        <a href="categoria.html">Personalizados</a>
+        <a href="sobre.html">Sobre</a>
+        <a href="contato.html">Contato</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="header-action-btn search-toggle" aria-label="Buscar">
+          <i class="fas fa-search"></i>
+        </button>
+        <button class="header-action-btn cart-toggle" aria-label="Carrinho">
+          <i class="fas fa-shopping-bag"></i>
+          <span class="cart-count" style="display:none">0</span>
+        </button>
+        <a href="https://wa.me/5511999999999" class="btn btn-whatsapp btn-sm header-whatsapp" target="_blank">
+          <i class="fab fa-whatsapp"></i> WhatsApp
+        </a>
+        <button class="mobile-toggle" aria-label="Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu">
+    <a href="index.html">Início</a>
+    <a href="loja.html">Loja</a>
+    <a href="#" class="mobile-submenu-toggle">Categorias <i class="fas fa-chevron-down" style="font-size:0.65rem;margin-left:8px"></i></a>
+    <div class="mobile-submenu" style="display:none">
+      <a href="categoria.html">Desk Toys & Fidgets</a>
+      <a href="categoria.html">Organização & Setup</a>
+      <a href="categoria.html">Decoração & Luminárias</a>
+      <a href="categoria.html">Personalizados</a>
+    </div>
+    <a href="categoria.html">Personalizados</a>
+    <a href="sobre.html">Sobre</a>
+    <a href="contato.html">Contato</a>
+    <a href="faq.html">Perguntas Frequentes</a>
+    <a href="prazos.html">Prazos & Entregas</a>
+    <div class="mobile-menu-actions">
+      <a href="https://wa.me/5511999999999" class="btn btn-whatsapp btn-block" target="_blank">
+        <i class="fab fa-whatsapp"></i> Falar no WhatsApp
+      </a>
+    </div>
+  </div>
+
+  <!-- Search Overlay -->
+  <div class="search-overlay">
+    <div class="search-box">
+      <div class="search-input-wrapper">
+        <i class="fas fa-search"></i>
+        <input type="text" placeholder="Buscar produtos, categorias...">
+        <button class="search-close" style="color:var(--dark-gray);font-size:1rem"><i class="fas fa-times"></i></button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Cart Overlay -->
+  <div class="cart-overlay"></div>
+  <div class="cart-drawer">
+    <div class="cart-header">
+      <h3><i class="fas fa-shopping-bag"></i> Carrinho</h3>
+      <button class="cart-close"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="cart-items">
+      <div class="cart-empty">
+        <i class="fas fa-shopping-bag"></i>
+        <p>Seu carrinho está vazio</p>
+      </div>
+    </div>
+    <div class="cart-footer">
+      <div class="cart-total">
+        <span class="cart-total-label">Total</span>
+        <span class="cart-total-price">R$ 0,00</span>
+      </div>
+      <a href="https://wa.me/5511999999999?text=Olá! Gostaria de finalizar meu pedido." class="btn btn-whatsapp btn-block" target="_blank">
+        <i class="fab fa-whatsapp"></i> Finalizar pelo WhatsApp
+      </a>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-decoration"><i class="fas fa-cube"></i></div>
+    <div class="hero-decoration"><i class="fas fa-cog"></i></div>
+    <div class="hero-decoration"><i class="fas fa-layer-group"></i></div>
+
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-badge fade-in">
+          <i class="fas fa-circle" style="color:#00b894;font-size:0.5rem"></i>
+          Produção ativa - Enviamos para todo Brasil
+        </div>
+        <h1 class="fade-in">Impressões 3D <span class="gradient-text">úteis, criativas</span> e personalizadas</h1>
+        <p class="fade-in">Peças produzidas com acabamento caprichado, envio para todo o Brasil e opções personalizadas sob encomenda.</p>
+        <div class="hero-buttons fade-in">
+          <a href="#mais-vendidos" class="btn btn-primary btn-lg">
+            <i class="fas fa-fire"></i> Ver Mais Vendidos
+          </a>
+          <a href="contato.html" class="btn btn-secondary btn-lg">
+            <i class="fas fa-paint-brush"></i> Pedir Personalizado
+          </a>
+        </div>
+        <div class="hero-stats fade-in">
+          <div class="hero-stat">
+            <div class="hero-stat-number">2.500+</div>
+            <div class="hero-stat-label">Pedidos enviados</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-number">15+</div>
+            <div class="hero-stat-label">Cores disponíveis</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-number">4.9</div>
+            <div class="hero-stat-label">Avaliação média</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Categories Section -->
+  <section class="categories" id="categorias">
+    <div class="container">
+      <h2 class="section-title fade-in">Navegue por Categoria</h2>
+      <p class="section-subtitle fade-in">Encontre a peça perfeita para o seu dia a dia, setup ou presente.</p>
+
+      <div class="categories-grid">
+        <a href="categoria.html" class="category-card stagger-item">
+          <div class="category-icon"><i class="fas fa-puzzle-piece"></i></div>
+          <h3>Desk Toys & Fidgets</h3>
+          <p>Brinquedos de mesa e fidgets criativos</p>
+        </a>
+        <a href="categoria.html" class="category-card stagger-item">
+          <div class="category-icon"><i class="fas fa-desktop"></i></div>
+          <h3>Organização & Setup</h3>
+          <p>Suportes, organizadores e acessórios</p>
+        </a>
+        <a href="categoria.html" class="category-card stagger-item">
+          <div class="category-icon"><i class="fas fa-lightbulb"></i></div>
+          <h3>Decoração & Luminárias</h3>
+          <p>Peças decorativas e luminárias exclusivas</p>
+        </a>
+        <a href="categoria.html" class="category-card stagger-item">
+          <div class="category-icon"><i class="fas fa-paint-brush"></i></div>
+          <h3>Personalizados</h3>
+          <p>Peças sob medida com seu toque especial</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Best Sellers Section -->
+  <section class="products-section" id="mais-vendidos">
+    <div class="container">
+      <h2 class="section-title fade-in">Mais Vendidos</h2>
+      <p class="section-subtitle fade-in">Os produtos que nossos clientes mais amam.</p>
+
+      <div class="products-grid">
+        <!-- Product 1 - Gear Click Fidget Keychain by Eternity Labs (MakerWorld) -->
+        <div class="product-card stagger-item">
+          <a href="produto.html?id=40" class="product-image">
+            <img src="images/gear-click-fidget.jpg" alt="Chaveiro Fidget Engrenagem" class="product-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+            <div class="product-image-placeholder gradient-1" style="display:none"><i class="fas fa-hand-pointer"></i></div>
+            <span class="product-badge badge-bestseller">Mais Vendido</span>
+          </a>
+          <div class="product-info">
+            <a href="produto.html?id=40"><h3 class="product-name">Chaveiro Fidget Engrenagem</h3></a>
+            <div class="product-price">R$ 22,50</div>
+            <button class="btn btn-primary btn-sm btn-block add-to-cart"><i class="fas fa-shopping-cart"></i> Comprar</button>
+          </div>
+        </div>
+
+        <div class="product-card stagger-item">
+          <a href="produto.html?id=45" class="product-image">
+            <img src="images/phone-stand-industrial.jpg" alt="Suporte para Celular Industrial" class="product-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+            <div class="product-image-placeholder gradient-2" style="display:none"><i class="fas fa-mobile-alt"></i></div>
+            <span class="product-badge badge-bestseller">Mais Vendido</span>
+          </a>
+          <div class="product-info">
+            <a href="produto.html?id=45"><h3 class="product-name">Suporte para Celular Industrial</h3></a>
+            <div class="product-price">R$ 42,00</div>
+            <button class="btn btn-primary btn-sm btn-block add-to-cart"><i class="fas fa-shopping-cart"></i> Comprar</button>
+          </div>
+        </div>
+
+        <div class="product-card stagger-item">
+          <a href="produto.html?id=56" class="product-image">
+            <img src="images/lumy-desk-lamp.jpg" alt="Luminária Lumy Ajustável" class="product-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+            <div class="product-image-placeholder gradient-3" style="display:none"><i class="fas fa-lightbulb"></i></div>
+            <span class="product-badge badge-bestseller">Mais Vendido</span>
+          </a>
+          <div class="product-info">
+            <a href="produto.html?id=56"><h3 class="product-name">Luminária Lumy Ajustável</h3></a>
+            <div class="product-price">R$ 105,00</div>
+            <button class="btn btn-primary btn-sm btn-block add-to-cart"><i class="fas fa-shopping-cart"></i> Comprar</button>
+          </div>
+        </div>
+
+        <div class="product-card stagger-item">
+          <a href="produto.html?id=46" class="product-image">
+            <img src="images/modular-desk-organiser.jpg" alt="Organizador Modular de Mesa" class="product-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+            <div class="product-image-placeholder gradient-4" style="display:none"><i class="fas fa-pen-ruler"></i></div>
+            <span class="product-badge badge-new">Novo</span>
+          </a>
+          <div class="product-info">
+            <a href="produto.html?id=46"><h3 class="product-name">Organizador Modular de Mesa</h3></a>
+            <div class="product-price">R$ 67,50</div>
+            <button class="btn btn-primary btn-sm btn-block add-to-cart"><i class="fas fa-shopping-cart"></i> Comprar</button>
+          </div>
+        </div>
+
+        <div class="product-card stagger-item">
+          <a href="produto.html?id=41" class="product-image">
+            <img src="images/magnetic-fidget-slider.jpg" alt="Fidget Magnético Slider" class="product-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+            <div class="product-image-placeholder gradient-5" style="display:none"><i class="fas fa-magnet"></i></div>
+            <span class="product-badge badge-bestseller">Mais Vendido</span>
+          </a>
+          <div class="product-info">
+            <a href="produto.html?id=41"><h3 class="product-name">Fidget Magnético Slider</h3></a>
+            <div class="product-price">R$ 27,00</div>
+            <button class="btn btn-primary btn-sm btn-block add-to-cart"><i class="fas fa-shopping-cart"></i> Comprar</button>
+          </div>
+        </div>
+
+        <div class="product-card stagger-item">
+          <a href="produto.html?id=52" class="product-image">
+            <img src="images/design-headphone-stand.jpg" alt="Suporte para Headphone Design" class="product-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+            <div class="product-image-placeholder gradient-6" style="display:none"><i class="fas fa-headphones"></i></div>
+            <span class="product-badge badge-new">Novo</span>
+          </a>
+          <div class="product-info">
+            <a href="produto.html?id=52"><h3 class="product-name">Suporte para Headphone Design</h3></a>
+            <div class="product-price">R$ 72,00</div>
+            <button class="btn btn-primary btn-sm btn-block add-to-cart"><i class="fas fa-shopping-cart"></i> Comprar</button>
+          </div>
+        </div>
+
+        <div class="product-card stagger-item">
+          <a href="produto.html?id=57" class="product-image">
+            <img src="images/luminosmelt-lamp.jpg" alt="Luminária LuminosMelt" class="product-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+            <div class="product-image-placeholder gradient-7" style="display:none"><i class="fas fa-lightbulb"></i></div>
+            <span class="product-badge badge-bestseller">Mais Vendido</span>
+          </a>
+          <div class="product-info">
+            <a href="produto.html?id=57"><h3 class="product-name">Luminária LuminosMelt</h3></a>
+            <div class="product-price">R$ 135,00</div>
+            <button class="btn btn-primary btn-sm btn-block add-to-cart"><i class="fas fa-shopping-cart"></i> Comprar</button>
+          </div>
+        </div>
+
+        <div class="product-card stagger-item">
+          <a href="produto.html?id=47" class="product-image">
+            <img src="images/poly-desk-organizer.jpg" alt="Poly-Desk Organizador" class="product-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+            <div class="product-image-placeholder gradient-8" style="display:none"><i class="fas fa-th-large"></i></div>
+            <span class="product-badge badge-custom">Personalizável</span>
+          </a>
+          <div class="product-info">
+            <a href="produto.html?id=47"><h3 class="product-name">Poly-Desk Organizador</h3></a>
+            <div class="product-price">R$ 75,00</div>
+            <button class="btn btn-primary btn-sm btn-block add-to-cart"><i class="fas fa-shopping-cart"></i> Comprar</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center mt-5 fade-in">
+        <a href="loja.html" class="btn btn-secondary"><i class="fas fa-th"></i> Ver Todos os Produtos</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section class="how-it-works" id="como-funciona">
+    <div class="container">
+      <h2 class="section-title fade-in">Como Funciona</h2>
+      <p class="section-subtitle fade-in">Do pedido à entrega em 4 passos simples.</p>
+
+      <div class="steps-grid">
+        <div class="step-card stagger-item">
+          <div class="step-number">1</div>
+          <div class="step-icon"><i class="fas fa-hand-pointer"></i></div>
+          <h3>Escolha o Produto</h3>
+          <p>Navegue pelo catálogo ou peça algo personalizado.</p>
+        </div>
+        <div class="step-card stagger-item">
+          <div class="step-number">2</div>
+          <div class="step-icon"><i class="fas fa-palette"></i></div>
+          <h3>Defina a Cor</h3>
+          <p>Escolha entre mais de 15 cores de filamento disponíveis.</p>
+        </div>
+        <div class="step-card stagger-item">
+          <div class="step-number">3</div>
+          <div class="step-icon"><i class="fas fa-cog"></i></div>
+          <h3>A Gente Produz</h3>
+          <p>Sua peça é impressa com cuidado e qualidade garantida.</p>
+        </div>
+        <div class="step-card stagger-item">
+          <div class="step-number">4</div>
+          <div class="step-icon"><i class="fas fa-truck"></i></div>
+          <h3>Você Recebe em Casa</h3>
+          <p>Enviamos para todo o Brasil com rastreamento.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Custom Products CTA -->
+  <section class="custom-cta">
+    <div class="container">
+      <div class="custom-cta-content fade-in">
+        <h2>Quer Algo Exclusivo?</h2>
+        <p>Criamos peças personalizadas sob encomenda. Traga sua ideia, um modelo 3D ou apenas uma referência e a gente transforma em realidade.</p>
+        <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
+          <a href="contato.html" class="btn btn-secondary btn-lg"><i class="fas fa-paper-plane"></i> Solicitar Orçamento</a>
+          <a href="https://wa.me/5511999999999?text=Olá! Gostaria de um orçamento para uma peça personalizada." class="btn btn-whatsapp btn-lg" target="_blank"><i class="fab fa-whatsapp"></i> Falar no WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="testimonials" id="avaliacoes">
+    <div class="container">
+      <h2 class="section-title fade-in">O que Nossos Clientes Dizem</h2>
+      <p class="section-subtitle fade-in">Avaliações reais de quem já comprou com a gente.</p>
+
+      <div class="testimonials-grid">
+        <div class="testimonial-card stagger-item">
+          <div class="testimonial-stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <p class="testimonial-text">"Comprei o suporte de celular e o chaveiro fidget. Acabamento impecável, cores vibrantes e chegou super rápido. Recomendo demais!"</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">MR</div>
+            <div>
+              <div class="testimonial-name">Mariana R.</div>
+              <div class="testimonial-location">São Paulo, SP</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card stagger-item">
+          <div class="testimonial-stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <p class="testimonial-text">"Pedi uma luminária personalizada e ficou incrível! O atendimento pelo WhatsApp foi super atencioso e a peça veio muito bem embalada."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">LF</div>
+            <div>
+              <div class="testimonial-name">Lucas F.</div>
+              <div class="testimonial-location">Belo Horizonte, MG</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card stagger-item">
+          <div class="testimonial-stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+          </div>
+          <p class="testimonial-text">"Comprei o dragão articulado de presente pro meu filho e ele amou! Qualidade surpreendente para impressão 3D. Já estou de olho no próximo pedido."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">CA</div>
+            <div>
+              <div class="testimonial-name">Camila A.</div>
+              <div class="testimonial-location">Curitiba, PR</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="social-proof-counter fade-in">
+        <div class="counter-number" data-target="2500">0+</div>
+        <div class="counter-label">Pedidos enviados para todo o Brasil</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Benefits Bar -->
+  <section class="benefits-bar">
+    <div class="container">
+      <div class="benefits-grid">
+        <div class="benefit-item stagger-item">
+          <div class="benefit-icon"><i class="fas fa-award"></i></div>
+          <h4>Produção Caprichada</h4>
+          <p>Cada peça é inspecionada antes do envio</p>
+        </div>
+        <div class="benefit-item stagger-item">
+          <div class="benefit-icon"><i class="fas fa-truck"></i></div>
+          <h4>Envio para Todo Brasil</h4>
+          <p>Entregamos em todos os estados via Correios</p>
+        </div>
+        <div class="benefit-item stagger-item">
+          <div class="benefit-icon"><i class="fas fa-paint-brush"></i></div>
+          <h4>Opções Personalizadas</h4>
+          <p>Crie peças exclusivas sob encomenda</p>
+        </div>
+        <div class="benefit-item stagger-item">
+          <div class="benefit-icon"><i class="fas fa-shield-alt"></i></div>
+          <h4>Pagamento Seguro</h4>
+          <p>PIX, cartão e boleto com total segurança</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="faq-section" id="faq">
+    <div class="container">
+      <h2 class="section-title fade-in">Perguntas Frequentes</h2>
+      <p class="section-subtitle fade-in">Tire suas dúvidas sobre nossos produtos e serviços.</p>
+
+      <div class="faq-list">
+        <div class="faq-item fade-in">
+          <button class="faq-question">
+            Qual o prazo de produção e entrega?
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer">
+            <p>O prazo de produção varia de 3 a 7 dias úteis dependendo da complexidade da peça. Após a produção, o envio é feito pelos Correios com prazo adicional de 3 a 12 dias úteis conforme a região.</p>
+          </div>
+        </div>
+
+        <div class="faq-item fade-in">
+          <button class="faq-question">
+            Quais materiais são utilizados?
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer">
+            <p>Trabalhamos principalmente com PLA, um material biodegradável, resistente e com excelente acabamento. Para peças que exigem mais resistência, utilizamos PETG. Ambos são seguros e duráveis.</p>
+          </div>
+        </div>
+
+        <div class="faq-item fade-in">
+          <button class="faq-question">
+            Posso personalizar cor e tamanho?
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer">
+            <p>Sim! Temos mais de 15 cores de filamento disponíveis. Para alterações de tamanho ou design, entre em contato pelo WhatsApp para um orçamento personalizado.</p>
+          </div>
+        </div>
+
+        <div class="faq-item fade-in">
+          <button class="faq-question">
+            Como funciona o pedido personalizado?
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer">
+            <p>Você pode enviar sua ideia, um modelo 3D (STL/OBJ) ou referências pelo WhatsApp ou formulário de contato. Avaliamos a viabilidade, enviamos o orçamento e, após aprovação, iniciamos a produção.</p>
+          </div>
+        </div>
+
+        <div class="faq-item fade-in">
+          <button class="faq-question">
+            Quais formas de pagamento são aceitas?
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer">
+            <p>Aceitamos PIX (com desconto), cartão de crédito (em até 3x sem juros), cartão de débito e boleto bancário. O pagamento é processado de forma segura.</p>
+          </div>
+        </div>
+
+        <div class="faq-item fade-in">
+          <button class="faq-question">
+            A peça é resistente?
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer">
+            <p>Sim! Nossas peças são impressas com paredes reforçadas e preenchimento adequado para cada tipo de uso. O PLA é um material rígido e durável, ideal para a maioria das aplicações decorativas e funcionais.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center mt-4 fade-in">
+        <a href="faq.html" class="btn btn-secondary"><i class="fas fa-question-circle"></i> Ver Todas as Perguntas</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">
+            <i class="fas fa-cube"></i>
+            <span>3D Print Shop</span>
+          </a>
+          <p>Impressões 3D úteis, criativas e personalizadas. Produção caprichada e envio para todo o Brasil.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="https://wa.me/5511999999999" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-column">
+          <h4>Loja</h4>
+          <a href="loja.html">Catálogo Completo</a>
+          <a href="categoria.html">Categorias</a>
+          <a href="sobre.html">Sobre</a>
+          <a href="contato.html">Contato</a>
+        </div>
+
+        <div class="footer-column">
+          <h4>Informações</h4>
+          <a href="sobre.html">Sobre Nós</a>
+          <a href="faq.html">Perguntas Frequentes</a>
+          <a href="prazos.html">Prazos & Entregas</a>
+          <a href="contato.html">Contato</a>
+        </div>
+
+        <div class="footer-column">
+          <h4>Contato</h4>
+          <a href="https://wa.me/5511999999999"><i class="fab fa-whatsapp" style="margin-right:6px"></i> (11) 99999-9999</a>
+          <a href="mailto:contato@3dprintshop.com.br"><i class="fas fa-envelope" style="margin-right:6px"></i> contato@3dprintshop.com.br</a>
+          <a href="https://instagram.com/3dprintshop"><i class="fab fa-instagram" style="margin-right:6px"></i> @3dprintshop</a>
+        </div>
+      </div>
+
+      <!-- Créditos dos Modelos 3D -->
+      <div class="model-credits">
+        <h4><i class="fas fa-cubes"></i> Créditos dos Modelos 3D</h4>
+        <p>Os modelos utilizados neste site foram criados por designers talentosos. Antes de vender, verifique a licença comercial de cada modelo.</p>
+        <div class="credits-list">
+          <a href="https://makerworld.com/en/models/556148-gear-click-fidget-keychain-print-in-place" target="_blank" rel="noopener"><strong>Gear Click Fidget Keychain</strong> - Eternity Labs (MakerWorld)</a>
+          <a href="https://makerworld.com/en/models/202649-phone-stand-industrial" target="_blank" rel="noopener"><strong>Phone Stand Industrial</strong> - Josh-3D (MakerWorld)</a>
+          <a href="https://makerworld.com/en/models/1596764-lumy-adjustable-desk-lamp" target="_blank" rel="noopener"><strong>Lumy Adjustable Desk Lamp</strong> - MakerWorld</a>
+          <a href="https://makerworld.com/en/models/609121-modular-desk-organiser" target="_blank" rel="noopener"><strong>Modular Desk Organiser</strong> - MakerWorld</a>
+          <a href="https://makerworld.com/en/models/744041-magnetic-fidget-slider-keychain" target="_blank" rel="noopener"><strong>Magnetic Fidget Slider Keychain</strong> - MakerWorld</a>
+          <a href="https://makerworld.com/en/models/515356-design-headphone-stand" target="_blank" rel="noopener"><strong>Design Headphone Stand</strong> - Deltaprints (MakerWorld)</a>
+          <a href="https://makerworld.com/en/models/2481573-luminosmelt-the-desktop-edition-table-lamp" target="_blank" rel="noopener"><strong>LuminosMelt Desktop Lamp</strong> - MakerWorld</a>
+          <a href="https://makerworld.com/en/models/1820511-poly-desk-organizer" target="_blank" rel="noopener"><strong>Poly-Desk Organizer</strong> - MakerWorld</a>
+          <a href="https://makerworld.com/en/models/231863-headphone-holder-modern-design" target="_blank" rel="noopener"><strong>Headphone Holder Modern Design</strong> - ngprint (MakerWorld)</a>
+          <a href="https://makerworld.com/en/models/2215506-corner-desk-lamp-v2" target="_blank" rel="noopener"><strong>Corner Desk Lamp V2</strong> - MakerWorld</a>
+          <a href="https://makerworld.com/en/models/1820511-poly-desk-organizer" target="_blank" rel="noopener"><strong>Stepped Desk Organizer</strong> - MakerWorld</a>
+          <a href="https://makerworld.com/en/models/675091-rotary-engine-keychain-fidget-print-in-place" target="_blank" rel="noopener"><strong>Rotary Engine Keychain Fidget</strong> - MakerWorld</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 3D Print Shop. Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Float -->
+  <a href="https://wa.me/5511999999999?text=Olá! Vi o site e tenho interesse em um produto." class="whatsapp-float" target="_blank" aria-label="WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <script src="script.js"></script>
+</body>
+</html>

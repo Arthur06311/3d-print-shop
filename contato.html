@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Entre em contato com a 3D Print Shop. Tire dúvidas, peça orçamentos e fale conosco pelo WhatsApp.">
+  <title>Contato | 3D Print Shop</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo"><i class="fas fa-cube"></i><span>3D Print Shop</span></a>
+      <nav class="nav-desktop">
+        <a href="index.html">Início</a>
+        <a href="loja.html">Loja</a>
+        <div class="nav-dropdown">
+          <a href="categoria.html">Categorias <i class="fas fa-chevron-down" style="font-size:0.65rem;margin-left:4px"></i></a>
+          <div class="nav-dropdown-menu">
+            <a href="categoria.html"><i class="fas fa-puzzle-piece"></i> Desk Toys & Fidgets</a>
+            <a href="categoria.html"><i class="fas fa-desktop"></i> Organização & Setup</a>
+            <a href="categoria.html"><i class="fas fa-lightbulb"></i> Decoração & Luminárias</a>
+            <a href="categoria.html"><i class="fas fa-paint-brush"></i> Personalizados</a>
+          </div>
+        </div>
+        <a href="categoria.html">Personalizados</a>
+        <a href="sobre.html">Sobre</a>
+        <a href="contato.html" class="active">Contato</a>
+      </nav>
+      <div class="header-actions">
+        <button class="header-action-btn search-toggle" aria-label="Buscar"><i class="fas fa-search"></i></button>
+        <button class="header-action-btn cart-toggle" aria-label="Carrinho">
+          <i class="fas fa-shopping-bag"></i>
+          <span class="cart-count" style="display:none">0</span>
+        </button>
+        <a href="https://wa.me/5511999999999" class="btn btn-whatsapp btn-sm header-whatsapp" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+        <button class="mobile-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-menu">
+    <a href="index.html">Início</a>
+    <a href="loja.html">Loja</a>
+    <a href="categoria.html">Categorias</a>
+    <a href="sobre.html">Sobre</a>
+    <a href="contato.html">Contato</a>
+    <div class="mobile-menu-actions">
+      <a href="https://wa.me/5511999999999" class="btn btn-whatsapp btn-block" target="_blank"><i class="fab fa-whatsapp"></i> Falar no WhatsApp</a>
+    </div>
+  </div>
+
+  <div class="search-overlay">
+    <div class="search-box">
+      <div class="search-input-wrapper">
+        <i class="fas fa-search"></i>
+        <input type="text" placeholder="Buscar produtos, categorias...">
+        <button class="search-close" style="color:var(--dark-gray);font-size:1rem"><i class="fas fa-times"></i></button>
+      </div>
+    </div>
+  </div>
+
+  <div class="cart-overlay"></div>
+  <div class="cart-drawer">
+    <div class="cart-header"><h3><i class="fas fa-shopping-bag"></i> Carrinho</h3><button class="cart-close"><i class="fas fa-times"></i></button></div>
+    <div class="cart-items"><div class="cart-empty"><i class="fas fa-shopping-bag"></i><p>Seu carrinho está vazio</p></div></div>
+    <div class="cart-footer">
+      <div class="cart-total"><span class="cart-total-label">Total</span><span class="cart-total-price">R$ 0,00</span></div>
+      <a href="https://wa.me/5511999999999" class="btn btn-whatsapp btn-block" target="_blank"><i class="fab fa-whatsapp"></i> Finalizar pelo WhatsApp</a>
+    </div>
+  </div>
+
+  <!-- Page Header -->
+  <section class="page-header">
+    <div class="container">
+      <h1 class="fade-in">Fale Conosco</h1>
+      <p class="fade-in">Tem alguma dúvida, quer um orçamento personalizado ou precisa de ajuda? Estamos aqui para você.</p>
+    </div>
+  </section>
+
+  <!-- Contact Content -->
+  <section class="contact-page">
+    <div class="container">
+      <div class="contact-grid">
+        <!-- Form -->
+        <div class="contact-form fade-in">
+          <h2>Envie sua Mensagem</h2>
+          <form id="contact-form">
+            <div class="form-group">
+              <label for="name">Nome Completo</label>
+              <input type="text" id="name" class="form-control" placeholder="Seu nome" required>
+            </div>
+            <div class="form-group">
+              <label for="email">E-mail</label>
+              <input type="email" id="email" class="form-control" placeholder="seu@email.com" required>
+            </div>
+            <div class="form-group">
+              <label for="phone">WhatsApp (opcional)</label>
+              <input type="tel" id="phone" class="form-control" placeholder="(11) 99999-9999">
+            </div>
+            <div class="form-group">
+              <label for="subject">Assunto</label>
+              <select id="subject" class="form-control" required>
+                <option value="">Selecione...</option>
+                <option value="orcamento">Orçamento Personalizado</option>
+                <option value="duvida">Dúvida sobre Produto</option>
+                <option value="pedido">Acompanhar Pedido</option>
+                <option value="parceria">Parceria / Revenda</option>
+                <option value="outro">Outro</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message">Mensagem</label>
+              <textarea id="message" class="form-control" placeholder="Descreva sua necessidade em detalhes..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block btn-lg">
+              <i class="fas fa-paper-plane"></i> Enviar Mensagem
+            </button>
+          </form>
+        </div>
+
+        <!-- Info Side -->
+        <div class="contact-info-side fade-in">
+          <div class="contact-info-card">
+            <div class="contact-info-icon"><i class="fab fa-whatsapp"></i></div>
+            <div class="contact-info-text">
+              <h4>WhatsApp</h4>
+              <p>A forma mais rápida de falar com a gente. Respondemos em minutos!</p>
+              <a href="https://wa.me/5511999999999?text=Olá! Vim pelo site e gostaria de informações." target="_blank">(11) 99999-9999</a>
+            </div>
+          </div>
+
+          <div class="contact-info-card">
+            <div class="contact-info-icon"><i class="fas fa-envelope"></i></div>
+            <div class="contact-info-text">
+              <h4>E-mail</h4>
+              <p>Para assuntos mais detalhados ou envio de arquivos 3D.</p>
+              <a href="mailto:contato@3dprintshop.com.br">contato@3dprintshop.com.br</a>
+            </div>
+          </div>
+
+          <div class="contact-info-card">
+            <div class="contact-info-icon"><i class="fab fa-instagram"></i></div>
+            <div class="contact-info-text">
+              <h4>Instagram</h4>
+              <p>Acompanhe novidades, bastidores e lançamentos.</p>
+              <a href="https://instagram.com/3dprintshop" target="_blank">@3dprintshop</a>
+            </div>
+          </div>
+
+          <div class="contact-info-card">
+            <div class="contact-info-icon"><i class="fas fa-clock"></i></div>
+            <div class="contact-info-text">
+              <h4>Horário de Atendimento</h4>
+              <p>Segunda a sexta: 9h às 18h<br>Sábado: 9h às 13h</p>
+            </div>
+          </div>
+
+          <div class="contact-info-card" style="background:var(--accent-gradient);color:var(--white)">
+            <div class="contact-info-icon" style="background:rgba(255,255,255,0.2)"><i class="fas fa-question-circle"></i></div>
+            <div class="contact-info-text">
+              <h4 style="color:var(--white)">Dúvidas Rápidas?</h4>
+              <p style="color:rgba(255,255,255,0.85)">Confira nossa página de perguntas frequentes antes de entrar em contato.</p>
+              <a href="faq.html" style="color:var(--white);text-decoration:underline">Ver Perguntas Frequentes</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo"><i class="fas fa-cube"></i><span>3D Print Shop</span></a>
+          <p>Impressões 3D úteis, criativas e personalizadas.</p>
+          <div class="footer-social">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-tiktok"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="https://wa.me/5511999999999"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+        <div class="footer-column"><h4>Loja</h4><a href="categoria.html">Desk Toys & Fidgets</a><a href="categoria.html">Organização & Setup</a><a href="categoria.html">Decoração & Luminárias</a><a href="categoria.html">Personalizados</a></div>
+        <div class="footer-column"><h4>Informações</h4><a href="sobre.html">Sobre Nós</a><a href="faq.html">Perguntas Frequentes</a><a href="prazos.html">Prazos & Entregas</a><a href="contato.html">Contato</a></div>
+        <div class="footer-column"><h4>Contato</h4><a href="https://wa.me/5511999999999"><i class="fab fa-whatsapp" style="margin-right:6px"></i> (11) 99999-9999</a><a href="mailto:contato@3dprintshop.com.br"><i class="fas fa-envelope" style="margin-right:6px"></i> contato@3dprintshop.com.br</a></div>
+      </div>
+      <div class="footer-bottom"><p>&copy; 2026 3D Print Shop. Todos os direitos reservados.</p></div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/5511999999999" class="whatsapp-float" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+  <script src="script.js"></script>
+</body>
+</html>

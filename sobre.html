@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Conheça a 3D Print Shop - Nossa história, valores e como transformamos ideias em peças 3D incríveis.">
+  <title>Sobre Nós | 3D Print Shop</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo"><i class="fas fa-cube"></i><span>3D Print Shop</span></a>
+      <nav class="nav-desktop">
+        <a href="index.html">Início</a>
+        <a href="loja.html">Loja</a>
+        <div class="nav-dropdown">
+          <a href="categoria.html">Categorias <i class="fas fa-chevron-down" style="font-size:0.65rem;margin-left:4px"></i></a>
+          <div class="nav-dropdown-menu">
+            <a href="categoria.html"><i class="fas fa-puzzle-piece"></i> Desk Toys & Fidgets</a>
+            <a href="categoria.html"><i class="fas fa-desktop"></i> Organização & Setup</a>
+            <a href="categoria.html"><i class="fas fa-lightbulb"></i> Decoração & Luminárias</a>
+            <a href="categoria.html"><i class="fas fa-paint-brush"></i> Personalizados</a>
+          </div>
+        </div>
+        <a href="categoria.html">Personalizados</a>
+        <a href="sobre.html" class="active">Sobre</a>
+        <a href="contato.html">Contato</a>
+      </nav>
+      <div class="header-actions">
+        <button class="header-action-btn search-toggle" aria-label="Buscar"><i class="fas fa-search"></i></button>
+        <button class="header-action-btn cart-toggle" aria-label="Carrinho">
+          <i class="fas fa-shopping-bag"></i>
+          <span class="cart-count" style="display:none">0</span>
+        </button>
+        <a href="https://wa.me/5511999999999" class="btn btn-whatsapp btn-sm header-whatsapp" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+        <button class="mobile-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-menu">
+    <a href="index.html">Início</a>
+    <a href="loja.html">Loja</a>
+    <a href="categoria.html">Categorias</a>
+    <a href="sobre.html">Sobre</a>
+    <a href="contato.html">Contato</a>
+    <div class="mobile-menu-actions">
+      <a href="https://wa.me/5511999999999" class="btn btn-whatsapp btn-block" target="_blank"><i class="fab fa-whatsapp"></i> Falar no WhatsApp</a>
+    </div>
+  </div>
+
+  <div class="search-overlay">
+    <div class="search-box">
+      <div class="search-input-wrapper">
+        <i class="fas fa-search"></i>
+        <input type="text" placeholder="Buscar produtos, categorias...">
+        <button class="search-close" style="color:var(--dark-gray);font-size:1rem"><i class="fas fa-times"></i></button>
+      </div>
+    </div>
+  </div>
+
+  <div class="cart-overlay"></div>
+  <div class="cart-drawer">
+    <div class="cart-header"><h3><i class="fas fa-shopping-bag"></i> Carrinho</h3><button class="cart-close"><i class="fas fa-times"></i></button></div>
+    <div class="cart-items"><div class="cart-empty"><i class="fas fa-shopping-bag"></i><p>Seu carrinho está vazio</p></div></div>
+    <div class="cart-footer">
+      <div class="cart-total"><span class="cart-total-label">Total</span><span class="cart-total-price">R$ 0,00</span></div>
+      <a href="https://wa.me/5511999999999" class="btn btn-whatsapp btn-block" target="_blank"><i class="fab fa-whatsapp"></i> Finalizar pelo WhatsApp</a>
+    </div>
+  </div>
+
+  <!-- About Hero -->
+  <section class="about-hero">
+    <div class="container">
+      <h1 class="fade-in">Nossa História</h1>
+      <p class="fade-in">Transformamos ideias em peças reais com impressão 3D. Conheça quem está por trás de cada peça produzida com carinho e atenção aos detalhes.</p>
+    </div>
+  </section>
+
+  <!-- Story -->
+  <section class="about-section">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-image-placeholder fade-in">
+          <i class="fas fa-cube"></i>
+        </div>
+        <div class="about-text fade-in">
+          <h2>Como Tudo Começou</h2>
+          <p>A 3D Print Shop nasceu da paixão por tecnologia e criatividade. Tudo começou com uma única impressora 3D na garagem e a vontade de criar peças que fossem realmente úteis e bonitas.</p>
+          <p>Hoje, contamos com um mini estúdio equipado com impressoras de última geração, oferecendo produtos com acabamento profissional e enviando para todo o Brasil.</p>
+          <p>Nossa missão é democratizar o acesso à impressão 3D, oferecendo peças de qualidade a preços acessíveis, com atendimento personalizado e um catálogo que não para de crescer.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How it works detailed -->
+  <section class="about-section" style="background:var(--light-gray)">
+    <div class="container">
+      <div class="about-grid" style="direction:rtl">
+        <div class="about-image-placeholder fade-in" style="background:linear-gradient(135deg, #00b894, #00cec9);direction:ltr">
+          <i class="fas fa-cogs"></i>
+        </div>
+        <div class="about-text fade-in" style="direction:ltr">
+          <h2>Como Produzimos</h2>
+          <p>Cada peça é produzida sob demanda na nossa oficina. Utilizamos impressoras FDM de alta precisão com filamentos de qualidade testada.</p>
+          <p>O processo começa com a preparação do modelo 3D, onde definimos os melhores parâmetros para cada tipo de peça. A impressão é acompanhada de perto e, após finalizada, cada peça passa por inspeção visual e remoção de suportes quando necessário.</p>
+          <p>Nosso objetivo é que cada peça chegue perfeita na sua casa. Por isso, investimos tempo em acabamento e embalagem segura.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Values -->
+  <section class="about-values">
+    <div class="container">
+      <h2 class="section-title fade-in">Nossos Valores</h2>
+      <p class="section-subtitle fade-in">O que nos move todos os dias.</p>
+
+      <div class="values-grid">
+        <div class="value-card stagger-item">
+          <i class="fas fa-award"></i>
+          <h3>Qualidade sem Atalhos</h3>
+          <p>Cada peça é inspecionada antes do envio. Não aceitamos nada que não seja digno de orgulho.</p>
+        </div>
+        <div class="value-card stagger-item">
+          <i class="fas fa-heart"></i>
+          <h3>Atendimento Humano</h3>
+          <p>Respondemos rápido, com atenção e carinho. Você fala direto com quem produz suas peças.</p>
+        </div>
+        <div class="value-card stagger-item">
+          <i class="fas fa-lightbulb"></i>
+          <h3>Inovação Constante</h3>
+          <p>Sempre testando novos modelos, materiais e técnicas para oferecer o melhor catálogo possível.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Numbers -->
+  <section class="about-section">
+    <div class="container">
+      <h2 class="section-title fade-in">Nossos Números</h2>
+      <p class="section-subtitle fade-in">Resultados que mostram nosso compromisso com qualidade.</p>
+
+      <div class="benefits-grid">
+        <div class="benefit-item stagger-item">
+          <div class="benefit-icon"><i class="fas fa-box"></i></div>
+          <h4>2.500+</h4>
+          <p>Pedidos enviados</p>
+        </div>
+        <div class="benefit-item stagger-item">
+          <div class="benefit-icon"><i class="fas fa-star"></i></div>
+          <h4>4.9/5</h4>
+          <p>Avaliação média</p>
+        </div>
+        <div class="benefit-item stagger-item">
+          <div class="benefit-icon"><i class="fas fa-map-marker-alt"></i></div>
+          <h4>26 Estados</h4>
+          <p>Entregas pelo Brasil</p>
+        </div>
+        <div class="benefit-item stagger-item">
+          <div class="benefit-icon"><i class="fas fa-palette"></i></div>
+          <h4>15+ Cores</h4>
+          <p>De filamento disponíveis</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="custom-cta">
+    <div class="container">
+      <div class="custom-cta-content fade-in">
+        <h2>Vamos Criar Algo Juntos?</h2>
+        <p>Conheça nosso catálogo ou envie sua ideia para um orçamento personalizado.</p>
+        <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
+          <a href="categoria.html" class="btn btn-secondary btn-lg"><i class="fas fa-th"></i> Ver Catálogo</a>
+          <a href="contato.html" class="btn btn-whatsapp btn-lg"><i class="fas fa-paper-plane"></i> Falar Conosco</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo"><i class="fas fa-cube"></i><span>3D Print Shop</span></a>
+          <p>Impressões 3D úteis, criativas e personalizadas.</p>
+          <div class="footer-social">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-tiktok"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="https://wa.me/5511999999999"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+        <div class="footer-column"><h4>Loja</h4><a href="categoria.html">Desk Toys & Fidgets</a><a href="categoria.html">Organização & Setup</a><a href="categoria.html">Decoração & Luminárias</a><a href="categoria.html">Personalizados</a></div>
+        <div class="footer-column"><h4>Informações</h4><a href="sobre.html">Sobre Nós</a><a href="faq.html">Perguntas Frequentes</a><a href="prazos.html">Prazos & Entregas</a><a href="contato.html">Contato</a></div>
+        <div class="footer-column"><h4>Contato</h4><a href="https://wa.me/5511999999999"><i class="fab fa-whatsapp" style="margin-right:6px"></i> (11) 99999-9999</a><a href="mailto:contato@3dprintshop.com.br"><i class="fas fa-envelope" style="margin-right:6px"></i> contato@3dprintshop.com.br</a></div>
+      </div>
+      <div class="footer-bottom"><p>&copy; 2026 3D Print Shop. Todos os direitos reservados.</p></div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/5511999999999" class="whatsapp-float" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+  <script src="script.js"></script>
+</body>
+</html>

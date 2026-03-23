@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Categorias de produtos impressos em 3D. Fidgets, luminárias, organização, decoração, gaming e muito mais. Preço por grama, envio para todo o Brasil.">
+  <title>Categorias | 3D Print Shop</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo"><i class="fas fa-cube"></i><span>3D Print Shop</span></a>
+      <nav class="nav-desktop">
+        <a href="index.html">Início</a>
+        <a href="loja.html">Loja</a>
+        <div class="nav-dropdown">
+          <a href="categoria.html" class="active">Categorias <i class="fas fa-chevron-down" style="font-size:0.65rem;margin-left:4px"></i></a>
+          <div class="nav-dropdown-menu">
+            <a href="categoria.html"><i class="fas fa-puzzle-piece"></i> Desk Toys & Fidgets</a>
+            <a href="categoria.html"><i class="fas fa-desktop"></i> Organização & Setup</a>
+            <a href="categoria.html"><i class="fas fa-lightbulb"></i> Decoração & Luminárias</a>
+            <a href="categoria.html"><i class="fas fa-paint-brush"></i> Personalizados</a>
+          </div>
+        </div>
+        <a href="categoria.html">Personalizados</a>
+        <a href="sobre.html">Sobre</a>
+        <a href="contato.html">Contato</a>
+      </nav>
+      <div class="header-actions">
+        <button class="header-action-btn search-toggle" aria-label="Buscar"><i class="fas fa-search"></i></button>
+        <button class="header-action-btn cart-toggle" aria-label="Carrinho">
+          <i class="fas fa-shopping-bag"></i>
+          <span class="cart-count" style="display:none">0</span>
+        </button>
+        <a href="https://wa.me/5511999999999" class="btn btn-whatsapp btn-sm header-whatsapp" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+        <button class="mobile-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu">
+    <a href="index.html">Início</a>
+    <a href="loja.html">Loja</a>
+    <a href="categoria.html">Categorias</a>
+    <a href="sobre.html">Sobre</a>
+    <a href="contato.html">Contato</a>
+    <div class="mobile-menu-actions">
+      <a href="https://wa.me/5511999999999" class="btn btn-whatsapp btn-block" target="_blank"><i class="fab fa-whatsapp"></i> Falar no WhatsApp</a>
+    </div>
+  </div>
+
+  <!-- Search Overlay -->
+  <div class="search-overlay">
+    <div class="search-box">
+      <div class="search-input-wrapper">
+        <i class="fas fa-search"></i>
+        <input type="text" placeholder="Buscar produtos, categorias...">
+        <button class="search-close" style="color:var(--dark-gray);font-size:1rem"><i class="fas fa-times"></i></button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Cart -->
+  <div class="cart-overlay"></div>
+  <div class="cart-drawer">
+    <div class="cart-header">
+      <h3><i class="fas fa-shopping-bag"></i> Carrinho</h3>
+      <button class="cart-close"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="cart-items"><div class="cart-empty"><i class="fas fa-shopping-bag"></i><p>Seu carrinho está vazio</p></div></div>
+    <div class="cart-footer">
+      <div class="cart-total"><span class="cart-total-label">Total</span><span class="cart-total-price">R$ 0,00</span></div>
+      <a href="https://wa.me/5511999999999?text=Olá! Gostaria de finalizar meu pedido." class="btn btn-whatsapp btn-block" target="_blank"><i class="fab fa-whatsapp"></i> Finalizar pelo WhatsApp</a>
+    </div>
+  </div>
+
+  <!-- Category Header -->
+  <section class="page-header">
+    <div class="container">
+      <div class="breadcrumb-list" style="justify-content:center;padding-bottom:16px">
+        <a href="index.html">Início</a>
+        <span class="separator"><i class="fas fa-chevron-right"></i></span>
+        <span>Categorias</span>
+      </div>
+      <h1 class="fade-in">Categorias</h1>
+      <p class="fade-in">Explore nosso catálogo por categoria. Cada peça é impressa com acabamento caprichado.</p>
+    </div>
+  </section>
+
+  <!-- Categories Grid -->
+  <section class="category-page" style="padding:40px 0 60px">
+    <div class="container">
+      <div id="categoriesGrid" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:24px"></div>
+    </div>
+  </section>
+
+  <!-- Popular Products -->
+  <section style="padding:0 0 60px">
+    <div class="container">
+      <h2 class="section-title fade-in">Mais Vendidos</h2>
+      <p class="section-subtitle fade-in">Os produtos mais populares de todas as categorias</p>
+      <div class="products-grid" id="popularGrid"></div>
+      <div class="text-center" style="margin-top:32px">
+        <a href="loja.html" class="btn btn-primary"><i class="fas fa-th"></i> Ver Catálogo Completo</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo"><i class="fas fa-cube"></i><span>3D Print Shop</span></a>
+          <p>Impressões 3D úteis, criativas e personalizadas.</p>
+          <div class="footer-social">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-tiktok"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="https://wa.me/5511999999999"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+        <div class="footer-column">
+          <h4>Loja</h4>
+          <a href="categoria.html">Desk Toys & Fidgets</a>
+          <a href="categoria.html">Organização & Setup</a>
+          <a href="categoria.html">Decoração & Luminárias</a>
+          <a href="categoria.html">Personalizados</a>
+        </div>
+        <div class="footer-column">
+          <h4>Informações</h4>
+          <a href="sobre.html">Sobre Nós</a>
+          <a href="faq.html">Perguntas Frequentes</a>
+          <a href="prazos.html">Prazos & Entregas</a>
+          <a href="contato.html">Contato</a>
+        </div>
+        <div class="footer-column">
+          <h4>Contato</h4>
+          <a href="https://wa.me/5511999999999"><i class="fab fa-whatsapp" style="margin-right:6px"></i> (11) 99999-9999</a>
+          <a href="mailto:contato@3dprintshop.com.br"><i class="fas fa-envelope" style="margin-right:6px"></i> contato@3dprintshop.com.br</a>
+        </div>
+      </div>
+      <div class="footer-bottom"><p>&copy; 2026 3D Print Shop. Todos os direitos reservados.</p></div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/5511999999999" class="whatsapp-float" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+
+  <script src="script.js"></script>
+  <script src="produtos.js"></script>
+  <script>
+  (function() {
+    if (typeof PRODUTOS === 'undefined') return;
+
+    // Category icons and gradients
+    var catMeta = {
+      'Animais Fofos': { icon: 'fas fa-cat', gradient: 'gradient-1' },
+      'Flores & Decoração': { icon: 'fas fa-seedling', gradient: 'gradient-2' },
+      'Fantasia & Princesas': { icon: 'fas fa-crown', gradient: 'gradient-3' },
+      'Vasos & Plantas': { icon: 'fas fa-leaf', gradient: 'gradient-4' },
+      'Porta-Retratos': { icon: 'fas fa-image', gradient: 'gradient-5' },
+      'Organização': { icon: 'fas fa-box', gradient: 'gradient-6' },
+      'Dragões & Dinossauros': { icon: 'fas fa-dragon', gradient: 'gradient-7' },
+      'Veículos & Foguetes': { icon: 'fas fa-rocket', gradient: 'gradient-8' },
+      'Espadas & Cosplay': { icon: 'fas fa-gavel', gradient: 'gradient-1' },
+      'Caveiras & Halloween': { icon: 'fas fa-skull', gradient: 'gradient-2' },
+      'Gaming & Geek': { icon: 'fas fa-gamepad', gradient: 'gradient-3' },
+      'Fidgets & Chaveiros': { icon: 'fas fa-hand-pointer', gradient: 'gradient-4' },
+      'Suportes & Setup': { icon: 'fas fa-desktop', gradient: 'gradient-5' },
+      'Luminárias': { icon: 'fas fa-lightbulb', gradient: 'gradient-6' },
+      'Casa & Utilidades': { icon: 'fas fa-home', gradient: 'gradient-7' },
+      'Personalizados': { icon: 'fas fa-paint-brush', gradient: 'gradient-8' }
+    };
+
+    // Build categories
+    var cats = {};
+    PRODUTOS.forEach(function(p) {
+      if (!cats[p.category]) cats[p.category] = { count: 0, minPrice: Infinity, image: p.image };
+      cats[p.category].count++;
+      if (p.price < cats[p.category].minPrice) cats[p.category].minPrice = p.price;
+    });
+
+    var html = '';
+    Object.keys(cats).sort().forEach(function(cat) {
+      var meta = catMeta[cat] || { icon: 'fas fa-cube', gradient: 'gradient-1' };
+      var c = cats[cat];
+      html += '<a href="loja.html" class="category-card-link" style="text-decoration:none;color:inherit" onclick="localStorage.setItem(\'filterCat\',\'' + cat + '\')">' +
+        '<div style="background:var(--white);border-radius:16px;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,0.08);transition:transform 0.2s,box-shadow 0.2s;cursor:pointer" onmouseover="this.style.transform=\'translateY(-4px)\';this.style.boxShadow=\'0 8px 24px rgba(0,0,0,0.12)\'" onmouseout="this.style.transform=\'\';this.style.boxShadow=\'0 2px 12px rgba(0,0,0,0.08)\'">' +
+          '<div class="product-image-placeholder ' + meta.gradient + '" style="height:140px;display:flex;align-items:center;justify-content:center;font-size:2.5rem;color:rgba(255,255,255,0.85)"><i class="' + meta.icon + '"></i></div>' +
+          '<div style="padding:16px 20px">' +
+            '<h3 style="font-size:1.1rem;font-weight:700;margin-bottom:6px">' + cat + '</h3>' +
+            '<p style="font-size:0.85rem;color:var(--dark-gray);margin:0">' + c.count + ' produtos &middot; a partir de R$ ' + c.minPrice.toFixed(2).replace('.', ',') + '</p>' +
+          '</div>' +
+        '</div>' +
+      '</a>';
+    });
+    document.getElementById('categoriesGrid').innerHTML = html;
+
+    // Popular products (top 8 by popular score)
+    var popular = PRODUTOS.slice().sort(function(a, b) { return (b.popular || 0) - (a.popular || 0); }).slice(0, 8);
+    var phtml = '';
+    popular.forEach(function(p) {
+      var badgeHtml = '';
+      if (p.badge) {
+        var bc = p.badge === 'Mais Vendido' ? 'badge-bestseller' : p.badge === 'Novo' ? 'badge-new' : 'badge-custom';
+        badgeHtml = '<span class="product-badge ' + bc + '">' + p.badge + '</span>';
+      }
+      phtml += '<div class="product-card stagger-item">' +
+        '<a href="produto.html?id=' + p.id + '" class="product-image">' +
+          '<img src="images/' + p.image + '" alt="' + p.name + '" class="product-img" onerror="this.style.display=\'none\';this.nextElementSibling.style.display=\'flex\'">' +
+          '<div class="product-image-placeholder ' + (p.gradient || 'gradient-1') + '" style="display:none"><i class="' + (p.icon || 'fas fa-cube') + '"></i></div>' +
+          badgeHtml +
+        '</a>' +
+        '<div class="product-info">' +
+          '<a href="produto.html?id=' + p.id + '"><h3 class="product-name">' + p.name + '</h3></a>' +
+          '<div class="product-price">R$ ' + p.price.toFixed(2).replace('.', ',') + '</div>' +
+          '<button class="btn btn-primary btn-sm btn-block add-to-cart"><i class="fas fa-shopping-cart"></i> Comprar</button>' +
+        '</div>' +
+      '</div>';
+    });
+    document.getElementById('popularGrid').innerHTML = phtml;
+
+    // Bind add-to-cart buttons for popular products
+    document.getElementById('popularGrid').querySelectorAll('.add-to-cart').forEach(function(btn, index) {
+      btn.addEventListener('click', function(e) {
+        e.preventDefault();
+        if (popular[index] && window.addToCart) {
+          window.addToCart(popular[index]);
+        }
+        this.innerHTML = '<i class="fas fa-check"></i> Adicionado!';
+        this.style.background = '#00b894';
+        var self = this;
+        setTimeout(function() {
+          self.innerHTML = '<i class="fas fa-shopping-cart"></i> Comprar';
+          self.style.background = '';
+        }, 1500);
+      });
+    });
+  })();
+  </script>
+</body>
+</html>

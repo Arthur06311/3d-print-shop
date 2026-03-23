@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Catálogo completo de impressões 3D. Mais de 100 produtos para todos os gostos. Fidgets, luminárias, organização, decoração e muito mais.">
+  <title>Loja Completa | 3D Print Shop</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">
+        <i class="fas fa-cube"></i>
+        <span>3D Print Shop</span>
+      </a>
+
+      <nav class="nav-desktop">
+        <a href="index.html">Início</a>
+        <a href="loja.html" class="active">Loja</a>
+        <a href="categoria.html">Categorias</a>
+        <a href="sobre.html">Sobre</a>
+        <a href="contato.html">Contato</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="header-action-btn cart-toggle" aria-label="Carrinho">
+          <i class="fas fa-shopping-bag"></i>
+          <span class="cart-count" style="display:none">0</span>
+        </button>
+        <a href="https://wa.me/5511999999999" class="btn btn-whatsapp btn-sm header-whatsapp" target="_blank">
+          <i class="fab fa-whatsapp"></i> WhatsApp
+        </a>
+      </div>
+
+      <button class="mobile-toggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu">
+    <a href="index.html">Início</a>
+    <a href="loja.html" class="active">Loja</a>
+    <a href="categoria.html">Categorias</a>
+    <a href="sobre.html">Sobre</a>
+    <a href="contato.html">Contato</a>
+    <a href="https://wa.me/5511999999999" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+  </div>
+
+  <!-- Search Hero -->
+  <section class="store-hero">
+    <div class="container">
+      <h1>Catálogo Completo</h1>
+      <p>124 produtos impressos em 3D para todos os gostos &middot; R$1,50 por grama</p>
+      <div class="store-search-wrapper">
+        <i class="fas fa-search"></i>
+        <input type="text" id="searchInput" placeholder="Buscar produtos... ex: luminária, fidget, organizador" autocomplete="off">
+        <button id="clearSearch" class="clear-search" style="display:none"><i class="fas fa-times"></i></button>
+      </div>
+      <div class="store-stats" id="storeStats">
+        <span id="totalCount">0</span> produtos encontrados
+      </div>
+    </div>
+  </section>
+
+  <!-- Filters & Products -->
+  <section class="store-section">
+    <div class="container">
+      <div class="store-layout">
+
+        <!-- Filters Bar -->
+        <div class="store-filters" id="filtersPanel">
+          <div class="filter-header">
+            <h3><i class="fas fa-filter"></i> Filtros</h3>
+            <button id="clearFilters" class="clear-filters-btn">Limpar tudo</button>
+          </div>
+
+          <div class="filter-groups-row">
+            <div class="filter-group">
+              <h4>Categoria</h4>
+              <div class="filter-chips filter-chips-vertical" id="categoryFilters">
+                <!-- Populated by JS -->
+              </div>
+            </div>
+
+            <div class="filter-group">
+              <h4>Preço</h4>
+              <div class="filter-chips" id="priceFilters">
+                <button class="filter-chip active" data-filter="all">Todos</button>
+                <button class="filter-chip" data-filter="0-30">Até R$30</button>
+                <button class="filter-chip" data-filter="30-60">R$30-60</button>
+                <button class="filter-chip" data-filter="60-100">R$60-100</button>
+                <button class="filter-chip" data-filter="100+">R$100+</button>
+              </div>
+            </div>
+
+            <div class="filter-group">
+              <h4>Ordenar</h4>
+              <select id="sortSelect" class="sort-select">
+                <option value="popular">Mais populares</option>
+                <option value="name">Nome A-Z</option>
+                <option value="price-asc">Menor preço</option>
+                <option value="price-desc">Maior preço</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Hidden audience filter (keep for JS compatibility) -->
+          <div id="audienceFilters" style="display:none">
+            <button class="filter-chip active" data-filter="all">Todos</button>
+          </div>
+        </div>
+
+        <!-- Products Grid -->
+        <div class="store-products">
+          <div class="products-grid" id="productsGrid">
+            <!-- Populated by JS from produtos.js -->
+          </div>
+
+          <div class="no-results" id="noResults" style="display:none">
+            <i class="fas fa-search"></i>
+            <h3>Nenhum produto encontrado</h3>
+            <p>Tente buscar por outro termo ou limpe os filtros.</p>
+            <button class="btn btn-primary" onclick="clearAllFilters()">Limpar Filtros</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo"><i class="fas fa-cube"></i><span>3D Print Shop</span></a>
+          <p>Impressões 3D úteis, criativas e personalizadas. Produção caprichada e envio para todo o Brasil.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+            <a href="https://wa.me/5511999999999" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+        <div class="footer-column">
+          <h4>Loja</h4>
+          <a href="loja.html">Catálogo Completo</a>
+          <a href="categoria.html">Categorias</a>
+          <a href="sobre.html">Sobre</a>
+          <a href="contato.html">Contato</a>
+        </div>
+        <div class="footer-column">
+          <h4>Informações</h4>
+          <a href="faq.html">Perguntas Frequentes</a>
+          <a href="prazos.html">Prazos & Entregas</a>
+        </div>
+        <div class="footer-column">
+          <h4>Contato</h4>
+          <a href="https://wa.me/5511999999999"><i class="fab fa-whatsapp" style="margin-right:6px"></i> (11) 99999-9999</a>
+          <a href="mailto:contato@3dprintshop.com.br"><i class="fas fa-envelope" style="margin-right:6px"></i> contato@3dprintshop.com.br</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 3D Print Shop. Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Float -->
+  <a href="https://wa.me/5511999999999?text=Olá! Vi o site e tenho interesse em um produto." class="whatsapp-float" target="_blank" aria-label="WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <script src="script.js"></script>
+  <script src="produtos.js"></script>
+  <script src="loja.js"></script>
+</body>
+</html>

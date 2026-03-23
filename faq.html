@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Perguntas frequentes sobre impressão 3D, prazos, materiais, pagamento e envio na 3D Print Shop.">
+  <title>Perguntas Frequentes | 3D Print Shop</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo"><i class="fas fa-cube"></i><span>3D Print Shop</span></a>
+      <nav class="nav-desktop">
+        <a href="index.html">Início</a>
+        <a href="loja.html">Loja</a>
+        <div class="nav-dropdown">
+          <a href="categoria.html">Categorias <i class="fas fa-chevron-down" style="font-size:0.65rem;margin-left:4px"></i></a>
+          <div class="nav-dropdown-menu">
+            <a href="categoria.html"><i class="fas fa-puzzle-piece"></i> Desk Toys & Fidgets</a>
+            <a href="categoria.html"><i class="fas fa-desktop"></i> Organização & Setup</a>
+            <a href="categoria.html"><i class="fas fa-lightbulb"></i> Decoração & Luminárias</a>
+            <a href="categoria.html"><i class="fas fa-paint-brush"></i> Personalizados</a>
+          </div>
+        </div>
+        <a href="categoria.html">Personalizados</a>
+        <a href="sobre.html">Sobre</a>
+        <a href="contato.html">Contato</a>
+      </nav>
+      <div class="header-actions">
+        <button class="header-action-btn search-toggle" aria-label="Buscar"><i class="fas fa-search"></i></button>
+        <button class="header-action-btn cart-toggle" aria-label="Carrinho">
+          <i class="fas fa-shopping-bag"></i>
+          <span class="cart-count" style="display:none">0</span>
+        </button>
+        <a href="https://wa.me/5511999999999" class="btn btn-whatsapp btn-sm header-whatsapp" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+        <button class="mobile-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-menu">
+    <a href="index.html">Início</a>
+    <a href="loja.html">Loja</a>
+    <a href="categoria.html">Categorias</a>
+    <a href="sobre.html">Sobre</a>
+    <a href="contato.html">Contato</a>
+    <div class="mobile-menu-actions">
+      <a href="https://wa.me/5511999999999" class="btn btn-whatsapp btn-block" target="_blank"><i class="fab fa-whatsapp"></i> Falar no WhatsApp</a>
+    </div>
+  </div>
+
+  <div class="search-overlay">
+    <div class="search-box">
+      <div class="search-input-wrapper">
+        <i class="fas fa-search"></i>
+        <input type="text" placeholder="Buscar produtos, categorias...">
+        <button class="search-close" style="color:var(--dark-gray);font-size:1rem"><i class="fas fa-times"></i></button>
+      </div>
+    </div>
+  </div>
+
+  <div class="cart-overlay"></div>
+  <div class="cart-drawer">
+    <div class="cart-header"><h3><i class="fas fa-shopping-bag"></i> Carrinho</h3><button class="cart-close"><i class="fas fa-times"></i></button></div>
+    <div class="cart-items"><div class="cart-empty"><i class="fas fa-shopping-bag"></i><p>Seu carrinho está vazio</p></div></div>
+    <div class="cart-footer">
+      <div class="cart-total"><span class="cart-total-label">Total</span><span class="cart-total-price">R$ 0,00</span></div>
+      <a href="https://wa.me/5511999999999" class="btn btn-whatsapp btn-block" target="_blank"><i class="fab fa-whatsapp"></i> Finalizar pelo WhatsApp</a>
+    </div>
+  </div>
+
+  <!-- Page Header -->
+  <section class="page-header">
+    <div class="container">
+      <h1 class="fade-in">Perguntas Frequentes</h1>
+      <p class="fade-in">Encontre respostas para as dúvidas mais comuns sobre nossos produtos, produção, envio e pagamento.</p>
+    </div>
+  </section>
+
+  <!-- FAQ Content -->
+  <section class="faq-section">
+    <div class="container">
+      <!-- Produtos -->
+      <h2 style="font-size:1.25rem;margin-bottom:20px;color:var(--accent-start)" class="fade-in"><i class="fas fa-cube" style="margin-right:8px"></i> Sobre os Produtos</h2>
+      <div class="faq-list" style="margin-bottom:48px">
+        <div class="faq-item fade-in">
+          <button class="faq-question">Quais materiais são utilizados na impressão? <i class="fas fa-chevron-down"></i></button>
+          <div class="faq-answer"><p>Trabalhamos principalmente com PLA (Ácido Poliláctico), um material biodegradável, resistente e com excelente acabamento superficial. Para peças que exigem maior resistência mecânica ou térmica, utilizamos PETG. Ambos são materiais seguros, duráveis e disponíveis em diversas cores.</p></div>
+        </div>
+        <div class="faq-item fade-in">
+          <button class="faq-question">As peças são resistentes? <i class="fas fa-chevron-down"></i></button>
+          <div class="faq-answer"><p>Sim! Nossas peças são impressas com paredes reforçadas e preenchimento adequado para cada tipo de uso. O PLA é um material rígido e durável, ideal para peças decorativas e funcionais do dia a dia. Para itens que precisam de maior resistência (como suportes), usamos configurações mais robustas.</p></div>
+        </div>
+        <div class="faq-item fade-in">
+          <button class="faq-question">Posso escolher a cor da peça? <i class="fas fa-chevron-down"></i></button>
+          <div class="faq-answer"><p>Sim! Temos mais de 15 cores de filamento disponíveis, incluindo cores sólidas, translúcidas e metálicas. Na página de cada produto você pode ver as cores disponíveis. Para combinações especiais ou cores que não estejam no catálogo, entre em contato pelo WhatsApp.</p></div>
+        </div>
+        <div class="faq-item fade-in">
+          <button class="faq-question">Posso alterar o tamanho de um produto? <i class="fas fa-chevron-down"></i></button>
+          <div class="faq-answer"><p>Em muitos casos, sim! Podemos redimensionar a maioria dos modelos. O preço pode variar conforme o novo tamanho, pois afeta o tempo de impressão e a quantidade de material. Entre em contato para um orçamento personalizado.</p></div>
+        </div>
+        <div class="faq-item fade-in">
+          <button class="faq-question">As peças têm linhas de impressão visíveis? <i class="fas fa-chevron-down"></i></button>
+          <div class="faq-answer"><p>Por se tratar de impressão FDM, as camadas de impressão podem ser sutilmente visíveis. Porém, imprimimos em alta resolução (0.2mm ou menor) e fazemos acabamento cuidadoso. O resultado é uma peça com aparência profissional e agradável ao toque.</p></div>
+        </div>
+      </div>
+
+      <!-- Personalizados -->
+      <h2 style="font-size:1.25rem;margin-bottom:20px;color:var(--accent-start)" class="fade-in"><i class="fas fa-paint-brush" style="margin-right:8px"></i> Personalizados</h2>
+      <div class="faq-list" style="margin-bottom:48px">
+        <div class="faq-item fade-in">
+          <button class="faq-question">Como funciona o pedido personalizado? <i class="fas fa-chevron-down"></i></button>
+          <div class="faq-answer"><p>Você pode enviar sua ideia de várias formas: um modelo 3D pronto (STL, OBJ), uma imagem de referência, ou simplesmente uma descrição do que precisa. Avaliamos a viabilidade técnica, enviamos o orçamento detalhado e, após aprovação e pagamento, iniciamos a produção.</p></div>
+        </div>
+        <div class="faq-item fade-in">
+          <button class="faq-question">Preciso ter um arquivo 3D pronto? <i class="fas fa-chevron-down"></i></button>
+          <div class="faq-answer"><p>Não necessariamente. Se você já tem um arquivo STL ou OBJ, ótimo! Caso contrário, podemos trabalhar com referências visuais (fotos, desenhos, links). Para modelagens complexas do zero, pode haver um custo adicional de modelagem 3D.</p></div>
+        </div>
+        <div class="faq-item fade-in">
+          <button class="faq-question">Qual o prazo para peças personalizadas? <i class="fas fa-chevron-down"></i></button>
+          <div class="faq-answer"><p>Depende da complexidade do projeto. Em geral, peças personalizadas levam de 5 a 15 dias úteis para produção. Se for necessário modelagem 3D, some mais 2-5 dias para criação e aprovação do modelo. Informamos o prazo exato no momento do orçamento.</p></div>
+        </div>
+        <div class="faq-item fade-in">
+          <button class="faq-question">Posso pedir em quantidade para eventos ou brindes? <i class="fas fa-chevron-down"></i></button>
+          <div class="faq-answer"><p>Claro! Trabalhamos com pedidos em quantidade para eventos, festas, brindes corporativos e lembranças. Oferecemos descontos progressivos conforme a quantidade. Entre em contato pelo WhatsApp para um orçamento especial.</p></div>
+        </div>
+      </div>
+
+      <!-- Pagamento -->
+      <h2 style="font-size:1.25rem;margin-bottom:20px;color:var(--accent-start)" class="fade-in"><i class="fas fa-credit-card" style="margin-right:8px"></i> Pagamento</h2>
+      <div class="faq-list" style="margin-bottom:48px">
+        <div class="faq-item fade-in">
+          <button class="faq-question">Quais formas de pagamento são aceitas? <i class="fas fa-chevron-down"></i></button>
+          <div class="faq-answer"><p>Aceitamos PIX (com 5% de desconto), cartão de crédito (em até 3x sem juros), cartão de débito e boleto bancário. O pagamento é processado de forma segura através de plataformas confiáveis.</p></div>
+        </div>
+        <div class="faq-item fade-in">
+          <button class="faq-question">O pagamento é feito antes da produção? <i class="fas fa-chevron-down"></i></button>
+          <div class="faq-answer"><p>Sim, como cada peça é produzida sob demanda especialmente para você, o pagamento é realizado antes do início da produção. Assim que confirmado, começamos a trabalhar na sua peça.</p></div>
+        </div>
+        <div class="faq-item fade-in">
+          <button class="faq-question">Emitem nota fiscal? <i class="fas fa-chevron-down"></i></button>
+          <div class="faq-answer"><p>Sim, emitimos nota fiscal para todos os pedidos. Se precisar de dados específicos na nota (como CNPJ da empresa), basta informar no momento da compra.</p></div>
+        </div>
+      </div>
+
+      <!-- Envio -->
+      <h2 style="font-size:1.25rem;margin-bottom:20px;color:var(--accent-start)" class="fade-in"><i class="fas fa-truck" style="margin-right:8px"></i> Envio & Entrega</h2>
+      <div class="faq-list" style="margin-bottom:48px">
+        <div class="faq-item fade-in">
+          <button class="faq-question">Qual o prazo de entrega? <i class="fas fa-chevron-down"></i></button>
+          <div class="faq-answer"><p>O prazo total é: produção (3-7 dias úteis) + envio pelos Correios (3-12 dias úteis conforme a região). Após a postagem, você recebe o código de rastreamento para acompanhar seu pedido em tempo real.</p></div>
+        </div>
+        <div class="faq-item fade-in">
+          <button class="faq-question">Enviam para todo o Brasil? <i class="fas fa-chevron-down"></i></button>
+          <div class="faq-answer"><p>Sim! Enviamos para todos os estados brasileiros através dos Correios (PAC e SEDEX). O frete é calculado pelo CEP de destino no momento da finalização do pedido.</p></div>
+        </div>
+        <div class="faq-item fade-in">
+          <button class="faq-question">Como é feita a embalagem? <i class="fas fa-chevron-down"></i></button>
+          <div class="faq-answer"><p>Todas as peças são embaladas com cuidado em plástico bolha e caixa reforçada para garantir que cheguem intactas. Peças mais delicadas recebem proteção extra com espuma e reforço estrutural.</p></div>
+        </div>
+        <div class="faq-item fade-in">
+          <button class="faq-question">E se a peça chegar danificada? <i class="fas fa-chevron-down"></i></button>
+          <div class="faq-answer"><p>Caso sua peça chegue com algum defeito de transporte, entre em contato pelo WhatsApp com fotos. Vamos avaliar e, se necessário, produzimos uma nova peça sem custo adicional. Sua satisfação é nossa prioridade.</p></div>
+        </div>
+      </div>
+
+      <div class="text-center fade-in" style="margin-top:32px">
+        <p style="color:var(--dark-gray);margin-bottom:16px">Não encontrou o que procura?</p>
+        <a href="contato.html" class="btn btn-primary btn-lg"><i class="fas fa-paper-plane"></i> Fale Conosco</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo"><i class="fas fa-cube"></i><span>3D Print Shop</span></a>
+          <p>Impressões 3D úteis, criativas e personalizadas.</p>
+          <div class="footer-social">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-tiktok"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="https://wa.me/5511999999999"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+        <div class="footer-column"><h4>Loja</h4><a href="categoria.html">Desk Toys & Fidgets</a><a href="categoria.html">Organização & Setup</a><a href="categoria.html">Decoração & Luminárias</a><a href="categoria.html">Personalizados</a></div>
+        <div class="footer-column"><h4>Informações</h4><a href="sobre.html">Sobre Nós</a><a href="faq.html">Perguntas Frequentes</a><a href="prazos.html">Prazos & Entregas</a><a href="contato.html">Contato</a></div>
+        <div class="footer-column"><h4>Contato</h4><a href="https://wa.me/5511999999999"><i class="fab fa-whatsapp" style="margin-right:6px"></i> (11) 99999-9999</a><a href="mailto:contato@3dprintshop.com.br"><i class="fas fa-envelope" style="margin-right:6px"></i> contato@3dprintshop.com.br</a></div>
+      </div>
+      <div class="footer-bottom"><p>&copy; 2026 3D Print Shop. Todos os direitos reservados.</p></div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/5511999999999" class="whatsapp-float" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+  <script src="script.js"></script>
+</body>
+</html>

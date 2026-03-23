@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Chaveiro Fidget Engrenagem - Impressão 3D com acabamento premium. Escolha sua cor e receba em casa.">
+  <title>Chaveiro Fidget Engrenagem | 3D Print Shop</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">
+        <i class="fas fa-cube"></i>
+        <span>3D Print Shop</span>
+      </a>
+      <nav class="nav-desktop">
+        <a href="index.html">Início</a>
+        <a href="loja.html">Loja</a>
+        <div class="nav-dropdown">
+          <a href="categoria.html">Categorias <i class="fas fa-chevron-down" style="font-size:0.65rem;margin-left:4px"></i></a>
+          <div class="nav-dropdown-menu">
+            <a href="categoria.html"><i class="fas fa-puzzle-piece"></i> Desk Toys & Fidgets</a>
+            <a href="categoria.html"><i class="fas fa-desktop"></i> Organização & Setup</a>
+            <a href="categoria.html"><i class="fas fa-lightbulb"></i> Decoração & Luminárias</a>
+            <a href="categoria.html"><i class="fas fa-paint-brush"></i> Personalizados</a>
+          </div>
+        </div>
+        <a href="categoria.html">Personalizados</a>
+        <a href="sobre.html">Sobre</a>
+        <a href="contato.html">Contato</a>
+      </nav>
+      <div class="header-actions">
+        <button class="header-action-btn search-toggle" aria-label="Buscar"><i class="fas fa-search"></i></button>
+        <button class="header-action-btn cart-toggle" aria-label="Carrinho">
+          <i class="fas fa-shopping-bag"></i>
+          <span class="cart-count" style="display:none">0</span>
+        </button>
+        <a href="https://wa.me/5511999999999" class="btn btn-whatsapp btn-sm header-whatsapp" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+        <button class="mobile-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu">
+    <a href="index.html">Início</a>
+    <a href="loja.html">Loja</a>
+    <a href="categoria.html">Categorias</a>
+    <a href="sobre.html">Sobre</a>
+    <a href="contato.html">Contato</a>
+    <a href="faq.html">Perguntas Frequentes</a>
+    <div class="mobile-menu-actions">
+      <a href="https://wa.me/5511999999999" class="btn btn-whatsapp btn-block" target="_blank"><i class="fab fa-whatsapp"></i> Falar no WhatsApp</a>
+    </div>
+  </div>
+
+  <!-- Search Overlay -->
+  <div class="search-overlay">
+    <div class="search-box">
+      <div class="search-input-wrapper">
+        <i class="fas fa-search"></i>
+        <input type="text" placeholder="Buscar produtos, categorias...">
+        <button class="search-close" style="color:var(--dark-gray);font-size:1rem"><i class="fas fa-times"></i></button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Cart Overlay -->
+  <div class="cart-overlay"></div>
+  <div class="cart-drawer">
+    <div class="cart-header">
+      <h3><i class="fas fa-shopping-bag"></i> Carrinho</h3>
+      <button class="cart-close"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="cart-items">
+      <div class="cart-empty"><i class="fas fa-shopping-bag"></i><p>Seu carrinho está vazio</p></div>
+    </div>
+    <div class="cart-footer">
+      <div class="cart-total">
+        <span class="cart-total-label">Total</span>
+        <span class="cart-total-price">R$ 0,00</span>
+      </div>
+      <a href="https://wa.me/5511999999999?text=Olá! Gostaria de finalizar meu pedido." class="btn btn-whatsapp btn-block" target="_blank"><i class="fab fa-whatsapp"></i> Finalizar pelo WhatsApp</a>
+    </div>
+  </div>
+
+  <!-- Breadcrumb -->
+  <div class="breadcrumb">
+    <div class="container">
+      <div class="breadcrumb-list" id="breadcrumbList">
+        <a href="index.html">Início</a>
+        <span class="separator"><i class="fas fa-chevron-right"></i></span>
+        <a href="loja.html">Loja</a>
+        <span class="separator"><i class="fas fa-chevron-right"></i></span>
+        <span id="breadcrumbName">Carregando...</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Product Detail -->
+  <section class="product-detail">
+    <div class="container">
+      <div class="product-detail-grid">
+        <!-- Gallery -->
+        <div class="product-gallery fade-in">
+          <div class="product-gallery-main" id="galleryMain">
+            <img id="productMainImg" src="" alt="" class="product-img" style="width:100%;height:100%;object-fit:cover;border-radius:var(--radius-lg)" onerror="this.style.display='none';document.getElementById('galleryPlaceholder').style.display='flex'">
+            <div id="galleryPlaceholder" class="product-image-placeholder gradient-1" style="width:100%;height:100%;display:none;align-items:center;justify-content:center;font-size:5rem;color:rgba(255,255,255,0.7);border-radius:var(--radius-lg)">
+              <i class="fas fa-cube"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- Info -->
+        <div class="product-detail-info fade-in">
+          <span class="product-badge badge-bestseller" id="productBadge" style="position:static;display:none;margin-bottom:12px"></span>
+          <h1 id="productTitle">Carregando...</h1>
+          <div class="product-detail-price" id="productPrice"></div>
+          <p class="product-detail-desc" id="productDesc"></p>
+          <p id="productCredit" style="font-size:0.9rem;color:var(--dark-gray);margin-top:8px"></p>
+
+          <div class="product-options">
+            <div class="product-option-label">Cor do Filamento:</div>
+            <div class="color-options">
+              <div class="color-option active" style="background:#6c5ce7" title="Roxo"></div>
+              <div class="color-option" style="background:#0984e3" title="Azul"></div>
+              <div class="color-option" style="background:#00b894" title="Verde"></div>
+              <div class="color-option" style="background:#e17055" title="Coral"></div>
+              <div class="color-option" style="background:#fdcb6e" title="Amarelo"></div>
+              <div class="color-option" style="background:#2d3436" title="Preto"></div>
+              <div class="color-option" style="background:#dfe6e9" title="Branco"></div>
+              <div class="color-option" style="background:#e84393" title="Rosa"></div>
+              <div class="color-option" style="background:#00cec9" title="Tiffany"></div>
+              <div class="color-option" style="background:#fd79a8" title="Pink"></div>
+              <div class="color-option" style="background:#a29bfe" title="Lilás"></div>
+              <div class="color-option" style="background:#fab1a0" title="Salmão"></div>
+            </div>
+          </div>
+
+          <div class="product-quick-info">
+            <div class="quick-info-item">
+              <i class="fas fa-cube"></i>
+              <span class="label">Material</span>
+              <span class="value">PLA Premium</span>
+            </div>
+            <div class="quick-info-item">
+              <i class="fas fa-palette"></i>
+              <span class="label">Cores</span>
+              <span class="value" id="productColors"></span>
+            </div>
+            <div class="quick-info-item">
+              <i class="fas fa-layer-group"></i>
+              <span class="label">Categoria</span>
+              <span class="value" id="productCategory"></span>
+            </div>
+            <div class="quick-info-item">
+              <i class="fas fa-clock"></i>
+              <span class="label">Produção</span>
+              <span class="value" id="productProduction"></span>
+            </div>
+          </div>
+
+          <div class="product-actions">
+            <button class="btn btn-primary btn-lg add-to-cart"><i class="fas fa-shopping-cart"></i> Comprar</button>
+            <a id="whatsappLink" href="#" class="btn btn-whatsapp btn-lg" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+          </div>
+
+          <div style="display:flex;gap:20px;flex-wrap:wrap;margin-top:8px">
+            <span style="font-size:0.85rem;color:var(--dark-gray);display:flex;align-items:center;gap:6px"><i class="fas fa-truck" style="color:var(--success)"></i> Frete calculado na finalização</span>
+            <span style="font-size:0.85rem;color:var(--dark-gray);display:flex;align-items:center;gap:6px"><i class="fas fa-shield-alt" style="color:var(--accent-start)"></i> Pagamento seguro</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tabs -->
+      <div class="product-detail-tabs fade-in">
+        <div class="tabs-nav">
+          <button class="tab-btn active" data-tab="#tab-desc">Descrição</button>
+          <button class="tab-btn" data-tab="#tab-specs">Especificações</button>
+          <button class="tab-btn" data-tab="#tab-faq">Perguntas</button>
+        </div>
+
+        <div class="tab-content active" id="tab-desc">
+          <p id="tabDescText"></p>
+        </div>
+
+        <div class="tab-content" id="tab-specs">
+          <p><strong>Material:</strong> PLA (Ácido Poliláctico) de alta qualidade</p>
+          <p><strong>Resolução de impressão:</strong> 0.2mm (camadas)</p>
+          <p><strong>Preenchimento:</strong> 20% (padrão)</p>
+          <p id="specWeight"><strong>Peso aproximado:</strong></p>
+          <p id="specPrice"><strong>Preço por grama:</strong> R$ 1,50/g</p>
+          <p id="specColors"><strong>Cores disponíveis:</strong></p>
+          <p id="specProduction"><strong>Produção:</strong></p>
+        </div>
+
+        <div class="tab-content" id="tab-faq">
+          <div class="faq-list">
+            <div class="faq-item">
+              <button class="faq-question">O produto é resistente? <i class="fas fa-chevron-down"></i></button>
+              <div class="faq-answer"><p>Sim! O PLA é um material rígido e durável. Para uso normal, a peça é bastante resistente. Evite quedas de grande altura em superfícies duras.</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question">Posso escolher a cor? <i class="fas fa-chevron-down"></i></button>
+              <div class="faq-answer"><p>Sim! Selecione a cor desejada acima. Para combinações especiais, entre em contato pelo WhatsApp.</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question">Posso pedir em quantidade? <i class="fas fa-chevron-down"></i></button>
+              <div class="faq-answer"><p>Claro! Temos descontos progressivos para pedidos em quantidade. Entre em contato para um orçamento especial.</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related Products -->
+  <section class="related-products">
+    <div class="container">
+      <h2 class="section-title fade-in">Produtos Relacionados</h2>
+      <p class="section-subtitle fade-in">Quem comprou este item também gostou destes:</p>
+      <div class="products-grid" id="relatedGrid"></div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo"><i class="fas fa-cube"></i><span>3D Print Shop</span></a>
+          <p>Impressões 3D úteis, criativas e personalizadas. Produção caprichada e envio para todo o Brasil.</p>
+          <div class="footer-social">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-tiktok"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="https://wa.me/5511999999999"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+        <div class="footer-column">
+          <h4>Loja</h4>
+          <a href="categoria.html">Desk Toys & Fidgets</a>
+          <a href="categoria.html">Organização & Setup</a>
+          <a href="categoria.html">Decoração & Luminárias</a>
+          <a href="categoria.html">Personalizados</a>
+        </div>
+        <div class="footer-column">
+          <h4>Informações</h4>
+          <a href="sobre.html">Sobre Nós</a>
+          <a href="faq.html">Perguntas Frequentes</a>
+          <a href="prazos.html">Prazos & Entregas</a>
+          <a href="contato.html">Contato</a>
+        </div>
+        <div class="footer-column">
+          <h4>Contato</h4>
+          <a href="https://wa.me/5511999999999"><i class="fab fa-whatsapp" style="margin-right:6px"></i> (11) 99999-9999</a>
+          <a href="mailto:contato@3dprintshop.com.br"><i class="fas fa-envelope" style="margin-right:6px"></i> contato@3dprintshop.com.br</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 3D Print Shop. Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/5511999999999" class="whatsapp-float" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+
+  <script src="script.js"></script>
+  <script src="produtos.js"></script>
+  <script>
+  (function() {
+    if (typeof PRODUTOS === 'undefined') return;
+    var params = new URLSearchParams(window.location.search);
+    var id = parseInt(params.get('id'));
+    var product = PRODUTOS.find(function(p) { return p.id === id; });
+    if (!product) { product = PRODUTOS[0]; }
+
+    // Title & meta
+    document.title = product.name + ' | 3D Print Shop';
+    document.getElementById('breadcrumbName').textContent = product.name;
+    document.getElementById('productTitle').textContent = product.name;
+    var weight = Math.round(product.price / 1.5);
+    document.getElementById('productPrice').innerHTML = 'R$ ' + product.price.toFixed(2).replace('.', ',') + ' <small style="color:var(--dark-gray);font-weight:400;font-size:0.7em">(' + weight + 'g &middot; R$1,50/g)</small>';
+    document.getElementById('productDesc').textContent = product.description;
+    document.getElementById('productColors').textContent = product.colors + ' cores';
+    document.getElementById('productCategory').textContent = product.category;
+    document.getElementById('productProduction').textContent = product.production;
+    document.getElementById('productCredit').innerHTML = 'Modelo: <a href="' + product.url + '" target="_blank" rel="noopener" style="color:var(--accent-start)">' + product.creator + '</a>';
+
+    // Badge
+    if (product.badge) {
+      var badge = document.getElementById('productBadge');
+      badge.textContent = product.badge;
+      badge.style.display = 'inline-block';
+      var bc = product.badge === 'Mais Vendido' ? 'badge-bestseller' : product.badge === 'Novo' ? 'badge-new' : 'badge-custom';
+      badge.className = 'product-badge ' + bc;
+    }
+
+    // Image
+    var mainImg = document.getElementById('productMainImg');
+    var placeholder = document.getElementById('galleryPlaceholder');
+    mainImg.src = 'images/' + product.image;
+    mainImg.alt = product.name;
+    placeholder.className = 'product-image-placeholder ' + (product.gradient || 'gradient-1');
+    placeholder.querySelector('i').className = product.icon || 'fas fa-cube';
+
+    // WhatsApp
+    var msg = encodeURIComponent('Olá! Tenho interesse no ' + product.name + ' (R$ ' + product.price.toFixed(2).replace('.', ',') + ').');
+    document.getElementById('whatsappLink').href = 'https://wa.me/5511999999999?text=' + msg;
+
+    // Tabs
+    document.getElementById('tabDescText').textContent = product.description;
+    document.getElementById('specWeight').innerHTML = '<strong>Peso aproximado:</strong> ~' + weight + 'g';
+    document.getElementById('specColors').innerHTML = '<strong>Cores disponíveis:</strong> ' + product.colors + ' cores';
+    document.getElementById('specProduction').innerHTML = '<strong>Produção:</strong> ' + product.production;
+
+    // Related products (same category, max 4)
+    var related = PRODUTOS.filter(function(p) { return p.category === product.category && p.id !== product.id; }).slice(0, 4);
+    if (related.length < 4) {
+      var more = PRODUTOS.filter(function(p) { return p.audience === product.audience && p.id !== product.id && p.category !== product.category; }).slice(0, 4 - related.length);
+      related = related.concat(more);
+    }
+    var rhtml = '';
+    related.forEach(function(r) {
+      rhtml += '<div class="product-card stagger-item">' +
+        '<a href="produto.html?id=' + r.id + '" class="product-image">' +
+          '<img src="images/' + r.image + '" alt="' + r.name + '" class="product-img" onerror="this.style.display=\'none\';this.nextElementSibling.style.display=\'flex\'">' +
+          '<div class="product-image-placeholder ' + (r.gradient || 'gradient-1') + '" style="display:none"><i class="' + (r.icon || 'fas fa-cube') + '"></i></div>' +
+        '</a>' +
+        '<div class="product-info">' +
+          '<a href="produto.html?id=' + r.id + '"><h3 class="product-name">' + r.name + '</h3></a>' +
+          '<div class="product-price">R$ ' + r.price.toFixed(2).replace('.', ',') + '</div>' +
+          '<button class="btn btn-primary btn-sm btn-block add-to-cart"><i class="fas fa-shopping-cart"></i> Comprar</button>' +
+        '</div>' +
+      '</div>';
+    });
+    document.getElementById('relatedGrid').innerHTML = rhtml;
+
+    // Add to cart - main button
+    var addBtn = document.querySelector('.product-detail-info .add-to-cart');
+    if (addBtn && window.addToCart) {
+      addBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        window.addToCart(product);
+        this.innerHTML = '<i class="fas fa-check"></i> Adicionado!';
+        this.style.background = '#00b894';
+        var self = this;
+        setTimeout(function() {
+          self.innerHTML = '<i class="fas fa-shopping-cart"></i> Adicionar ao Carrinho';
+          self.style.background = '';
+        }, 1500);
+      });
+    }
+
+    // Add to cart - related products
+    document.getElementById('relatedGrid').querySelectorAll('.add-to-cart').forEach(function(btn, index) {
+      btn.addEventListener('click', function(e) {
+        e.preventDefault();
+        if (related[index] && window.addToCart) {
+          window.addToCart(related[index]);
+        }
+        this.innerHTML = '<i class="fas fa-check"></i> Adicionado!';
+        this.style.background = '#00b894';
+        var self = this;
+        setTimeout(function() {
+          self.innerHTML = '<i class="fas fa-shopping-cart"></i> Comprar';
+          self.style.background = '';
+        }, 1500);
+      });
+    });
+  })();
+  </script>
+</body>
+</html>
