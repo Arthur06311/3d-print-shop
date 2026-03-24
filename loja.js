@@ -214,7 +214,7 @@
     filteredProducts.forEach(function (p) {
       var badgeHtml = '';
       if (p.badge) {
-        var badgeClass = p.badge === 'Mais Vendido' ? 'badge-bestseller' : p.badge === 'Novo' ? 'badge-new' : p.badge === 'Personalizável' ? 'badge-custom' : 'badge-order';
+        var badgeClass = p.badge === 'Mais Vendido' ? 'badge-bestseller' : p.badge === 'Novo' ? 'badge-new' : 'badge-order';
         badgeHtml = '<span class="product-badge ' + badgeClass + '">' + p.badge + '</span>';
       }
       var prodLink = 'produto.html?id=' + p.id;
