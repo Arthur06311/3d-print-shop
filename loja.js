@@ -76,7 +76,16 @@
   // Bind Events
   // ========================================
   function bindEvents() {
-    // Search
+    // Search - prevent Enter from reloading and trigger search immediately
+    searchInput.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter') {
+        e.preventDefault();
+        searchQuery = searchInput.value.trim().toLowerCase();
+        clearSearchBtn.style.display = searchQuery ? 'flex' : 'none';
+        applyFilters();
+      }
+    });
+
     let debounce;
     searchInput.addEventListener('input', function () {
       clearTimeout(debounce);
