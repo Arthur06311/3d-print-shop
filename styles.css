@@ -2657,6 +2657,59 @@ textarea.form-control {
   background-clip: text;
 }
 
+/* Mercado Pago Button */
+.btn-mercadopago {
+  background: linear-gradient(135deg, #009ee3, #0077b6);
+  color: #fff;
+  margin-top: 10px;
+  font-weight: 600;
+  border: none;
+  padding: 14px 20px;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  font-family: inherit;
+}
+.btn-mercadopago:hover {
+  background: linear-gradient(135deg, #0077b6, #005f8a);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 16px rgba(0, 158, 227, 0.3);
+}
+.btn-mercadopago:active { transform: translateY(0); }
+.btn-mercadopago i { font-size: 1.1rem; }
+
+.cart-payment-info {
+  text-align: center;
+  font-size: 0.72rem;
+  color: #888;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+.cart-payment-info i { font-size: 0.65rem; }
+
+.cart-payment-methods {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 8px;
+  flex-wrap: wrap;
+}
+.cart-payment-methods img {
+  height: 20px;
+  opacity: 0.6;
+  transition: opacity 0.2s;
+}
+.cart-payment-methods img:hover { opacity: 1; }
+
 /* ========================================
    Scrollbar Custom
    ======================================== */

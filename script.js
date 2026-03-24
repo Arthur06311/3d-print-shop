@@ -514,3 +514,87 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
 });
+
+// ========================================
+// Mercado Pago Checkout
+// ========================================
+function initMercadoPago() {
+  var cart = JSON.parse(localStorage.getItem('cart3d') || '[]');
+  if (cart.length === 0) {
+    alert('Seu carrinho está vazio!');
+    return;
+  }
+
+  var total = 0;
+  var itemsList = '';
+  cart.forEach(function(item) {
+    total += item.price * item.qty;
+    itemsList += item.name + ' (x' + item.qty + '), ';
+  });
+  itemsList = itemsList.slice(0, -2);
+
+  // Mercado Pago payment link - store owner configures their link
+  // Using mp.me link format (Mercado Pago's payment link)
+  var MP_USER = 'SEUMERCADOPAGO'; // Replace with actual Mercado Pago username/link
+  var description = encodeURIComponent('3D Print Shop - ' + itemsList);
+  var mpLink = 'https://link.mercadopago.com.br/' + MP_USER;
+
+  // Show checkout modal
+  var modal = document.createElement('div');
+  modal.id = 'mpModal';
+  modal.style.cssText = 'position:fixed;inset:0;background:rgba(0,0,0,0.6);backdrop-filter:blur(8px);z-index:10000;display:flex;align-items:center;justify-content:center;animation:fadeIn 0.2s ease';
+
+  var totalFormatted = 'R$ ' + total.toFixed(2).replace('.', ',');
+
+  modal.innerHTML = '<div style="background:#fff;border-radius:20px;max-width:420px;width:90%;padding:36px;text-align:center;box-shadow:0 24px 80px rgba(0,0,0,0.3);animation:modalIn 0.3s ease">' +
+    '<div style="width:64px;height:64px;border-radius:16px;background:linear-gradient(135deg,#009ee3,#0077b6);display:flex;align-items:center;justify-content:center;margin:0 auto 20px;font-size:1.5rem;color:#fff"><i class="fas fa-credit-card"></i></div>' +
+    '<h3 style="font-size:1.3rem;margin-bottom:8px;color:#1a1a2e">Pagamento via Mercado Pago</h3>' +
+    '<p style="color:#666;font-size:0.9rem;margin-bottom:20px">Finalize seu pedido com segurança</p>' +
+    '<div style="background:#f7f8fc;border-radius:12px;padding:16px;margin-bottom:20px">' +
+      '<div style="font-size:0.8rem;color:#888;margin-bottom:4px">Total do pedido</div>' +
+      '<div style="font-size:2rem;font-weight:800;color:#1a1a2e">' + totalFormatted + '</div>' +
+      '<div style="font-size:0.75rem;color:#888;margin-top:6px">' + cart.length + ' item(s) no carrinho</div>' +
+    '</div>' +
+    '<div style="display:flex;flex-direction:column;gap:10px">' +
+      '<a href="' + mpLink + '" target="_blank" style="display:flex;align-items:center;justify-content:center;gap:8px;padding:14px;border-radius:10px;background:linear-gradient(135deg,#009ee3,#0077b6);color:#fff;font-weight:700;font-size:0.95rem;text-decoration:none;transition:transform 0.2s" onmouseover="this.style.transform=\'translateY(-1px)\'" onmouseout="this.style.transform=\'none\'">' +
+        '<i class="fas fa-external-link-alt"></i> Ir para Mercado Pago' +
+      '</a>' +
+      '<button onclick="copyMPInfo()" style="display:flex;align-items:center;justify-content:center;gap:8px;padding:12px;border-radius:10px;background:#f0f0f5;color:#1a1a2e;font-weight:600;font-size:0.88rem;border:none;cursor:pointer;font-family:inherit"><i class="fas fa-copy"></i> Copiar dados do pedido</button>' +
+      '<button onclick="document.getElementById(\'mpModal\').remove()" style="padding:10px;border:none;background:none;color:#888;cursor:pointer;font-size:0.85rem;font-family:inherit">Cancelar</button>' +
+    '</div>' +
+    '<p style="font-size:0.7rem;color:#aaa;margin-top:16px"><i class="fas fa-lock" style="margin-right:4px"></i> Pix, cartão de crédito, débito e boleto</p>' +
+  '</div>';
+
+  document.body.appendChild(modal);
+
+  modal.addEventListener('click', function(e) {
+    if (e.target === modal) modal.remove();
+  });
+}
+
+function copyMPInfo() {
+  var cart = JSON.parse(localStorage.getItem('cart3d') || '[]');
+  var total = 0;
+  var text = '📦 Pedido 3D Print Shop\n\n';
+  cart.forEach(function(item) {
+    total += item.price * item.qty;
+    text += '• ' + item.name + ' (x' + item.qty + ') - R$ ' + (item.price * item.qty).toFixed(2).replace('.', ',') + '\n';
+  });
+  text += '\n💰 Total: R$ ' + total.toFixed(2).replace('.', ',');
+
+  if (navigator.clipboard) {
+    navigator.clipboard.writeText(text).then(function() {
+      var btn = document.querySelector('#mpModal button[onclick="copyMPInfo()"]');
+      if (btn) {
+        btn.innerHTML = '<i class="fas fa-check"></i> Copiado!';
+        btn.style.background = '#d4edda';
+        btn.style.color = '#155724';
+        setTimeout(function() {
+          btn.innerHTML = '<i class="fas fa-copy"></i> Copiar dados do pedido';
+          btn.style.background = '#f0f0f5';
+          btn.style.color = '#1a1a2e';
+        }, 2000);
+      }
+    });
+  }
+}
