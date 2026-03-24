@@ -23,13 +23,16 @@
         <div class="nav-dropdown">
           <a href="categoria.html">Categorias <i class="fas fa-chevron-down" style="font-size:0.65rem;margin-left:4px"></i></a>
           <div class="nav-dropdown-menu">
-            <a href="categoria.html"><i class="fas fa-puzzle-piece"></i> Desk Toys & Fidgets</a>
-            <a href="categoria.html"><i class="fas fa-desktop"></i> Organização & Setup</a>
-            <a href="categoria.html"><i class="fas fa-lightbulb"></i> Decoração & Flores</a>
-            <a href="categoria.html"><i class="fas fa-paint-brush"></i> Personalizados</a>
+            <a href="loja.html" onclick="localStorage.setItem('filterCat','Fidgets & Chaveiros')"><i class="fas fa-hand-pointer"></i> Fidgets & Chaveiros</a>
+            <a href="loja.html" onclick="localStorage.setItem('filterCat','Dragões & Dinossauros')"><i class="fas fa-dragon"></i> Dragões & Dinossauros</a>
+            <a href="loja.html" onclick="localStorage.setItem('filterCat','Animais Fofos')"><i class="fas fa-paw"></i> Animais Fofos</a>
+            <a href="loja.html" onclick="localStorage.setItem('filterCat','Organização')"><i class="fas fa-box"></i> Organização</a>
+            <a href="loja.html" onclick="localStorage.setItem('filterCat','Suportes & Setup')"><i class="fas fa-desktop"></i> Suportes & Setup</a>
+            <a href="loja.html" onclick="localStorage.setItem('filterCat','Flores & Decoração')"><i class="fas fa-seedling"></i> Flores & Decoração</a>
+            <a href="loja.html" onclick="localStorage.setItem('filterCat','Casa & Utilidades')"><i class="fas fa-home"></i> Casa & Utilidades</a>
+            <a href="loja.html" onclick="localStorage.setItem('filterCat','Gaming & Geek')"><i class="fas fa-gamepad"></i> Gaming & Geek</a>
           </div>
         </div>
-        <a href="categoria.html">Personalizados</a>
         <a href="sobre.html">Sobre</a>
         <a href="contato.html">Contato</a>
       </nav>
@@ -112,27 +115,6 @@
         </div>
       </div>
 
-      <!-- Personalizados -->
-      <h2 style="font-size:1.25rem;margin-bottom:20px;color:var(--accent-start)" class="fade-in"><i class="fas fa-paint-brush" style="margin-right:8px"></i> Personalizados</h2>
-      <div class="faq-list" style="margin-bottom:48px">
-        <div class="faq-item fade-in">
-          <button class="faq-question">Como funciona o pedido personalizado? <i class="fas fa-chevron-down"></i></button>
-          <div class="faq-answer"><p>Você pode enviar sua ideia de várias formas: um modelo 3D pronto (STL, OBJ), uma imagem de referência, ou simplesmente uma descrição do que precisa. Avaliamos a viabilidade técnica, enviamos o orçamento detalhado e, após aprovação e pagamento, iniciamos a produção.</p></div>
-        </div>
-        <div class="faq-item fade-in">
-          <button class="faq-question">Preciso ter um arquivo 3D pronto? <i class="fas fa-chevron-down"></i></button>
-          <div class="faq-answer"><p>Não necessariamente. Se você já tem um arquivo STL ou OBJ, ótimo! Caso contrário, podemos trabalhar com referências visuais (fotos, desenhos, links). Para modelagens complexas do zero, pode haver um custo adicional de modelagem 3D.</p></div>
-        </div>
-        <div class="faq-item fade-in">
-          <button class="faq-question">Qual o prazo para peças personalizadas? <i class="fas fa-chevron-down"></i></button>
-          <div class="faq-answer"><p>Depende da complexidade do projeto. Em geral, peças personalizadas levam de 5 a 15 dias úteis para produção. Se for necessário modelagem 3D, some mais 2-5 dias para criação e aprovação do modelo. Informamos o prazo exato no momento do orçamento.</p></div>
-        </div>
-        <div class="faq-item fade-in">
-          <button class="faq-question">Posso pedir em quantidade para eventos ou brindes? <i class="fas fa-chevron-down"></i></button>
-          <div class="faq-answer"><p>Claro! Trabalhamos com pedidos em quantidade para eventos, festas, brindes corporativos e lembranças. Oferecemos descontos progressivos conforme a quantidade. Entre em contato pelo WhatsApp para um orçamento especial.</p></div>
-        </div>
-      </div>
-
       <!-- Pagamento -->
       <h2 style="font-size:1.25rem;margin-bottom:20px;color:var(--accent-start)" class="fade-in"><i class="fas fa-credit-card" style="margin-right:8px"></i> Pagamento</h2>
       <div class="faq-list" style="margin-bottom:48px">
@@ -192,11 +174,11 @@
             <a href="https://wa.me/5511999999999"><i class="fab fa-whatsapp"></i></a>
           </div>
         </div>
-        <div class="footer-column"><h4>Loja</h4><a href="categoria.html">Desk Toys & Fidgets</a><a href="categoria.html">Organização & Setup</a><a href="categoria.html">Decoração & Flores</a><a href="categoria.html">Personalizados</a></div>
+        <div class="footer-column"><h4>Loja</h4><a href="categoria.html">Desk Toys & Fidgets</a><a href="categoria.html">Organização & Setup</a><a href="categoria.html">Decoração & Flores</a></div>
         <div class="footer-column"><h4>Informações</h4><a href="sobre.html">Sobre Nós</a><a href="faq.html">Perguntas Frequentes</a><a href="prazos.html">Prazos & Entregas</a><a href="contato.html">Contato</a></div>
         <div class="footer-column"><h4>Contato</h4><a href="https://wa.me/5511999999999"><i class="fab fa-whatsapp" style="margin-right:6px"></i> (11) 99999-9999</a><a href="mailto:contato@3dprintshop.com.br"><i class="fas fa-envelope" style="margin-right:6px"></i> contato@3dprintshop.com.br</a></div>
       </div>
-      <div class="footer-bottom"><p>&copy; 2026 3D Print Shop. Todos os direitos reservados.</p></div>
+      <div class="footer-bottom"><p>&copy; 2026 3D Print Shop. Todos os direitos reservados. <a href="admin.html" class="admin-link" title="Painel Admin"><i class="fas fa-cog"></i></a></p></div>
     </div>
   </footer>
 

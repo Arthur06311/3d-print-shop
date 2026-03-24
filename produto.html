@@ -26,13 +26,16 @@
         <div class="nav-dropdown">
           <a href="categoria.html">Categorias <i class="fas fa-chevron-down" style="font-size:0.65rem;margin-left:4px"></i></a>
           <div class="nav-dropdown-menu">
-            <a href="categoria.html"><i class="fas fa-puzzle-piece"></i> Desk Toys & Fidgets</a>
-            <a href="categoria.html"><i class="fas fa-desktop"></i> Organização & Setup</a>
-            <a href="categoria.html"><i class="fas fa-lightbulb"></i> Decoração & Flores</a>
-            <a href="categoria.html"><i class="fas fa-paint-brush"></i> Personalizados</a>
+            <a href="loja.html" onclick="localStorage.setItem('filterCat','Fidgets & Chaveiros')"><i class="fas fa-hand-pointer"></i> Fidgets & Chaveiros</a>
+            <a href="loja.html" onclick="localStorage.setItem('filterCat','Dragões & Dinossauros')"><i class="fas fa-dragon"></i> Dragões & Dinossauros</a>
+            <a href="loja.html" onclick="localStorage.setItem('filterCat','Animais Fofos')"><i class="fas fa-paw"></i> Animais Fofos</a>
+            <a href="loja.html" onclick="localStorage.setItem('filterCat','Organização')"><i class="fas fa-box"></i> Organização</a>
+            <a href="loja.html" onclick="localStorage.setItem('filterCat','Suportes & Setup')"><i class="fas fa-desktop"></i> Suportes & Setup</a>
+            <a href="loja.html" onclick="localStorage.setItem('filterCat','Flores & Decoração')"><i class="fas fa-seedling"></i> Flores & Decoração</a>
+            <a href="loja.html" onclick="localStorage.setItem('filterCat','Casa & Utilidades')"><i class="fas fa-home"></i> Casa & Utilidades</a>
+            <a href="loja.html" onclick="localStorage.setItem('filterCat','Gaming & Geek')"><i class="fas fa-gamepad"></i> Gaming & Geek</a>
           </div>
         </div>
-        <a href="categoria.html">Personalizados</a>
         <a href="sobre.html">Sobre</a>
         <a href="contato.html">Contato</a>
       </nav>
@@ -172,9 +175,73 @@
             <a id="whatsappLink" href="#" class="btn btn-whatsapp btn-lg" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
           </div>
 
-          <div style="display:flex;gap:20px;flex-wrap:wrap;margin-top:8px">
-            <span style="font-size:0.85rem;color:var(--dark-gray);display:flex;align-items:center;gap:6px"><i class="fas fa-truck" style="color:var(--success)"></i> Frete calculado na finalização</span>
-            <span style="font-size:0.85rem;color:var(--dark-gray);display:flex;align-items:center;gap:6px"><i class="fas fa-shield-alt" style="color:var(--accent-start)"></i> Pagamento seguro</span>
+          <div style="display:flex;gap:16px;flex-wrap:wrap;margin-top:12px;padding:14px 18px;background:var(--light-gray);border-radius:12px">
+            <span style="font-size:0.82rem;color:var(--dark-gray);display:flex;align-items:center;gap:6px"><i class="fas fa-truck" style="color:var(--success)"></i> Envio para todo Brasil</span>
+            <span style="font-size:0.82rem;color:var(--dark-gray);display:flex;align-items:center;gap:6px"><i class="fas fa-shield-alt" style="color:var(--accent-start)"></i> Pagamento seguro</span>
+            <span style="font-size:0.82rem;color:var(--dark-gray);display:flex;align-items:center;gap:6px"><i class="fas fa-undo" style="color:var(--warning)"></i> Garantia de qualidade</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Caixa de Especificações -->
+      <div class="product-specs-box fade-in" style="margin-top:40px">
+        <h2 style="font-size:1.3rem;font-weight:700;margin-bottom:20px;display:flex;align-items:center;gap:8px"><i class="fas fa-clipboard-list" style="color:var(--accent-start)"></i> Especificações do Produto</h2>
+        <div class="specs-grid">
+          <div class="spec-item">
+            <div class="spec-icon"><i class="fas fa-cube"></i></div>
+            <div class="spec-info">
+              <span class="spec-label">Material</span>
+              <span class="spec-value">PLA Premium</span>
+            </div>
+          </div>
+          <div class="spec-item">
+            <div class="spec-icon"><i class="fas fa-layer-group"></i></div>
+            <div class="spec-info">
+              <span class="spec-label">Resolução</span>
+              <span class="spec-value">0.2mm (camadas)</span>
+            </div>
+          </div>
+          <div class="spec-item">
+            <div class="spec-icon"><i class="fas fa-th"></i></div>
+            <div class="spec-info">
+              <span class="spec-label">Preenchimento</span>
+              <span class="spec-value">20% padrão</span>
+            </div>
+          </div>
+          <div class="spec-item">
+            <div class="spec-icon"><i class="fas fa-palette"></i></div>
+            <div class="spec-info">
+              <span class="spec-label">Cores Disponíveis</span>
+              <span class="spec-value" id="specColors">12 cores</span>
+            </div>
+          </div>
+          <div class="spec-item">
+            <div class="spec-icon"><i class="fas fa-clock"></i></div>
+            <div class="spec-info">
+              <span class="spec-label">Prazo de Produção</span>
+              <span class="spec-value" id="specProduction">3-5 dias úteis</span>
+            </div>
+          </div>
+          <div class="spec-item">
+            <div class="spec-icon"><i class="fas fa-tags"></i></div>
+            <div class="spec-info">
+              <span class="spec-label">Categoria</span>
+              <span class="spec-value" id="specCategory">—</span>
+            </div>
+          </div>
+          <div class="spec-item">
+            <div class="spec-icon"><i class="fas fa-print"></i></div>
+            <div class="spec-info">
+              <span class="spec-label">Tecnologia</span>
+              <span class="spec-value">FDM (Impressão 3D)</span>
+            </div>
+          </div>
+          <div class="spec-item">
+            <div class="spec-icon"><i class="fas fa-check-circle"></i></div>
+            <div class="spec-info">
+              <span class="spec-label">Acabamento</span>
+              <span class="spec-value">Lixado e revisado</span>
+            </div>
           </div>
         </div>
       </div>
@@ -183,20 +250,12 @@
       <div class="product-detail-tabs fade-in">
         <div class="tabs-nav">
           <button class="tab-btn active" data-tab="#tab-desc">Descrição</button>
-          <button class="tab-btn" data-tab="#tab-specs">Especificações</button>
-          <button class="tab-btn" data-tab="#tab-faq">Perguntas</button>
+          <button class="tab-btn" data-tab="#tab-faq">Perguntas Frequentes</button>
         </div>
 
         <div class="tab-content active" id="tab-desc">
           <p id="tabDescText"></p>
-        </div>
-
-        <div class="tab-content" id="tab-specs">
-          <p><strong>Material:</strong> PLA (Ácido Poliláctico) de alta qualidade</p>
-          <p><strong>Resolução de impressão:</strong> 0.2mm (camadas)</p>
-          <p><strong>Preenchimento:</strong> 20% (padrão)</p>
-          <p id="specColors"><strong>Cores disponíveis:</strong></p>
-          <p id="specProduction"><strong>Produção:</strong></p>
+          <div id="tabDescExtra" style="margin-top:16px"></div>
         </div>
 
         <div class="tab-content" id="tab-faq">
@@ -212,6 +271,10 @@
             <div class="faq-item">
               <button class="faq-question">Posso pedir em quantidade? <i class="fas fa-chevron-down"></i></button>
               <div class="faq-answer"><p>Claro! Temos descontos progressivos para pedidos em quantidade. Entre em contato para um orçamento especial.</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question">Como é a embalagem? <i class="fas fa-chevron-down"></i></button>
+              <div class="faq-answer"><p>Todas as peças são embaladas com plástico bolha e caixa reforçada. Peças delicadas recebem proteção extra com espuma.</p></div>
             </div>
           </div>
         </div>
@@ -247,7 +310,6 @@
           <a href="categoria.html">Desk Toys & Fidgets</a>
           <a href="categoria.html">Organização & Setup</a>
           <a href="categoria.html">Decoração & Flores</a>
-          <a href="categoria.html">Personalizados</a>
         </div>
         <div class="footer-column">
           <h4>Informações</h4>
@@ -263,7 +325,7 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <p>&copy; 2026 3D Print Shop. Todos os direitos reservados.</p>
+        <p>&copy; 2026 3D Print Shop. Todos os direitos reservados. <a href="admin.html" class="admin-link" title="Painel Admin"><i class="fas fa-cog"></i></a></p>
       </div>
     </div>
   </footer>
@@ -312,10 +374,15 @@
     var msg = encodeURIComponent('Olá! Tenho interesse no ' + product.name + ' (R$ ' + product.price.toFixed(2).replace('.', ',') + ').');
     document.getElementById('whatsappLink').href = 'https://wa.me/5511999999999?text=' + msg;
 
-    // Tabs
+    // Tabs & Specs
     document.getElementById('tabDescText').textContent = product.description;
-    document.getElementById('specColors').innerHTML = '<strong>Cores disponíveis:</strong> ' + product.colors + ' cores';
-    document.getElementById('specProduction').innerHTML = '<strong>Produção:</strong> ' + product.production;
+    document.getElementById('tabDescExtra').innerHTML =
+      '<p style="color:var(--dark-gray);font-size:0.92rem;line-height:1.8">Produzido sob demanda em PLA premium com resolução de 0.2mm por camada. ' +
+      'Cada peça passa por inspeção de qualidade antes do envio. Disponível em ' + product.colors + ' cores de filamento — ' +
+      'selecione a sua favorita acima. Prazo de produção: ' + product.production + ' úteis após confirmação do pagamento.</p>';
+    document.getElementById('specColors').textContent = product.colors + ' cores';
+    document.getElementById('specProduction').textContent = product.production;
+    document.getElementById('specCategory').textContent = product.category;
 
     // Related products (same category, max 4)
     var related = PRODUTOS.filter(function(p) { return p.category === product.category && p.id !== product.id; }).slice(0, 4);

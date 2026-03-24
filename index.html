@@ -27,13 +27,16 @@
         <div class="nav-dropdown">
           <a href="categoria.html">Categorias <i class="fas fa-chevron-down" style="font-size:0.65rem;margin-left:4px"></i></a>
           <div class="nav-dropdown-menu">
-            <a href="categoria.html"><i class="fas fa-puzzle-piece"></i> Desk Toys & Fidgets</a>
-            <a href="categoria.html"><i class="fas fa-desktop"></i> Organização & Setup</a>
-            <a href="categoria.html"><i class="fas fa-lightbulb"></i> Decoração & Flores</a>
-            <a href="categoria.html"><i class="fas fa-paint-brush"></i> Personalizados</a>
+            <a href="loja.html" onclick="localStorage.setItem('filterCat','Fidgets & Chaveiros')"><i class="fas fa-hand-pointer"></i> Fidgets & Chaveiros</a>
+            <a href="loja.html" onclick="localStorage.setItem('filterCat','Dragões & Dinossauros')"><i class="fas fa-dragon"></i> Dragões & Dinossauros</a>
+            <a href="loja.html" onclick="localStorage.setItem('filterCat','Animais Fofos')"><i class="fas fa-paw"></i> Animais Fofos</a>
+            <a href="loja.html" onclick="localStorage.setItem('filterCat','Organização')"><i class="fas fa-box"></i> Organização</a>
+            <a href="loja.html" onclick="localStorage.setItem('filterCat','Suportes & Setup')"><i class="fas fa-desktop"></i> Suportes & Setup</a>
+            <a href="loja.html" onclick="localStorage.setItem('filterCat','Flores & Decoração')"><i class="fas fa-seedling"></i> Flores & Decoração</a>
+            <a href="loja.html" onclick="localStorage.setItem('filterCat','Casa & Utilidades')"><i class="fas fa-home"></i> Casa & Utilidades</a>
+            <a href="loja.html" onclick="localStorage.setItem('filterCat','Gaming & Geek')"><i class="fas fa-gamepad"></i> Gaming & Geek</a>
           </div>
         </div>
-        <a href="categoria.html">Personalizados</a>
         <a href="sobre.html">Sobre</a>
         <a href="contato.html">Contato</a>
       </nav>
@@ -67,9 +70,7 @@
       <a href="categoria.html">Desk Toys & Fidgets</a>
       <a href="categoria.html">Organização & Setup</a>
       <a href="categoria.html">Decoração & Flores</a>
-      <a href="categoria.html">Personalizados</a>
     </div>
-    <a href="categoria.html">Personalizados</a>
     <a href="sobre.html">Sobre</a>
     <a href="contato.html">Contato</a>
     <a href="faq.html">Perguntas Frequentes</a>
@@ -125,11 +126,11 @@
     <div class="container">
       <div class="hero-content">
         <div class="hero-badge fade-in">
-          <i class="fas fa-circle" style="color:#00b894;font-size:0.5rem"></i>
-          Produção ativa - Enviamos para todo Brasil
+          <i class="fas fa-circle" style="color:#00b894;font-size:0.5rem;animation:pulse-dot 2s infinite"></i>
+          Produção ativa — Enviamos para todo Brasil
         </div>
         <h1 class="fade-in">Impressões 3D <span class="gradient-text">úteis, criativas</span> e personalizadas</h1>
-        <p class="fade-in">Peças produzidas com acabamento caprichado, envio para todo o Brasil e opções personalizadas sob encomenda.</p>
+        <p class="fade-in">Mais de 470 peças no catálogo, produzidas com acabamento premium e enviadas com cuidado para todo o Brasil.</p>
         <div class="hero-buttons fade-in">
           <a href="#mais-vendidos" class="btn btn-primary btn-lg">
             <i class="fas fa-fire"></i> Ver Mais Vendidos
@@ -162,27 +163,41 @@
       <h2 class="section-title fade-in">Navegue por Categoria</h2>
       <p class="section-subtitle fade-in">Encontre a peça perfeita para o seu dia a dia, setup ou presente.</p>
 
-      <div class="categories-grid">
-        <a href="categoria.html" class="category-card stagger-item">
-          <div class="category-icon"><i class="fas fa-puzzle-piece"></i></div>
-          <h3>Desk Toys & Fidgets</h3>
-          <p>Brinquedos de mesa e fidgets criativos</p>
+      <div class="categories-grid" style="grid-template-columns:repeat(auto-fill,minmax(200px,1fr))">
+        <a href="loja.html" onclick="localStorage.setItem('filterCat','Fidgets & Chaveiros')" class="category-card stagger-item">
+          <div class="category-icon"><i class="fas fa-hand-pointer"></i></div>
+          <h3>Fidgets & Chaveiros</h3>
+          <p>Anti-stress e chaveiros criativos</p>
         </a>
-        <a href="categoria.html" class="category-card stagger-item">
+        <a href="loja.html" onclick="localStorage.setItem('filterCat','Dragões & Dinossauros')" class="category-card stagger-item">
+          <div class="category-icon"><i class="fas fa-dragon"></i></div>
+          <h3>Dragões & Dinos</h3>
+          <p>Articulados e colecionáveis épicos</p>
+        </a>
+        <a href="loja.html" onclick="localStorage.setItem('filterCat','Organização')" class="category-card stagger-item">
+          <div class="category-icon"><i class="fas fa-box"></i></div>
+          <h3>Organização</h3>
+          <p>Organizadores e porta-objetos</p>
+        </a>
+        <a href="loja.html" onclick="localStorage.setItem('filterCat','Suportes & Setup')" class="category-card stagger-item">
           <div class="category-icon"><i class="fas fa-desktop"></i></div>
-          <h3>Organização & Setup</h3>
-          <p>Suportes, organizadores e acessórios</p>
+          <h3>Suportes & Setup</h3>
+          <p>Suportes para celular, headphone e mais</p>
         </a>
-        <a href="categoria.html" class="category-card stagger-item">
-          <div class="category-icon"><i class="fas fa-lightbulb"></i></div>
-          <h3>Decoração & Flores</h3>
-          <p>Vasos, flores e peças decorativas exclusivas</p>
+        <a href="loja.html" onclick="localStorage.setItem('filterCat','Flores & Decoração')" class="category-card stagger-item">
+          <div class="category-icon"><i class="fas fa-seedling"></i></div>
+          <h3>Flores & Decoração</h3>
+          <p>Buquês, vasos e peças decorativas</p>
         </a>
-        <a href="categoria.html" class="category-card stagger-item">
-          <div class="category-icon"><i class="fas fa-paint-brush"></i></div>
-          <h3>Personalizados</h3>
-          <p>Peças sob medida com seu toque especial</p>
+        <a href="loja.html" onclick="localStorage.setItem('filterCat','Gaming & Geek')" class="category-card stagger-item">
+          <div class="category-icon"><i class="fas fa-gamepad"></i></div>
+          <h3>Gaming & Geek</h3>
+          <p>Miniaturas e acessórios gamer</p>
         </a>
+      </div>
+
+      <div class="text-center fade-in" style="margin-top:32px">
+        <a href="categoria.html" class="btn btn-secondary"><i class="fas fa-th-large"></i> Ver Todas as Categorias</a>
       </div>
     </div>
   </section>
@@ -191,7 +206,7 @@
   <section class="products-section" id="mais-vendidos">
     <div class="container">
       <h2 class="section-title fade-in">Mais Vendidos</h2>
-      <p class="section-subtitle fade-in">Os produtos que nossos clientes mais amam.</p>
+      <p class="section-subtitle fade-in">Os favoritos dos nossos clientes — qualidade comprovada e acabamento impecável.</p>
 
       <div class="products-grid">
         <!-- Product 1 - Gear Click Fidget Keychain by Eternity Labs (MakerWorld) -->
@@ -310,32 +325,32 @@
   <section class="how-it-works" id="como-funciona">
     <div class="container">
       <h2 class="section-title fade-in">Como Funciona</h2>
-      <p class="section-subtitle fade-in">Do pedido à entrega em 4 passos simples.</p>
+      <p class="section-subtitle fade-in">Do pedido à sua porta em 4 passos simples e sem complicação.</p>
 
       <div class="steps-grid">
         <div class="step-card stagger-item">
           <div class="step-number">1</div>
           <div class="step-icon"><i class="fas fa-hand-pointer"></i></div>
           <h3>Escolha o Produto</h3>
-          <p>Navegue pelo catálogo ou peça algo personalizado.</p>
+          <p>Navegue por mais de 470 peças no catálogo e adicione ao carrinho.</p>
         </div>
         <div class="step-card stagger-item">
           <div class="step-number">2</div>
           <div class="step-icon"><i class="fas fa-palette"></i></div>
           <h3>Defina a Cor</h3>
-          <p>Escolha entre mais de 15 cores de filamento disponíveis.</p>
+          <p>Mais de 15 cores de filamento premium para combinar com seu estilo.</p>
         </div>
         <div class="step-card stagger-item">
           <div class="step-number">3</div>
           <div class="step-icon"><i class="fas fa-cog"></i></div>
           <h3>A Gente Produz</h3>
-          <p>Sua peça é impressa com cuidado e qualidade garantida.</p>
+          <p>Sua peça é impressa com cuidado, revisada e embalada com carinho.</p>
         </div>
         <div class="step-card stagger-item">
           <div class="step-number">4</div>
           <div class="step-icon"><i class="fas fa-truck"></i></div>
-          <h3>Você Recebe em Casa</h3>
-          <p>Enviamos para todo o Brasil com rastreamento.</p>
+          <h3>Receba em Casa</h3>
+          <p>Envio para todo o Brasil com código de rastreamento em tempo real.</p>
         </div>
       </div>
     </div>
@@ -345,8 +360,8 @@
   <section class="custom-cta">
     <div class="container">
       <div class="custom-cta-content fade-in">
-        <h2>Quer Algo Exclusivo?</h2>
-        <p>Criamos peças personalizadas sob encomenda. Traga sua ideia, um modelo 3D ou apenas uma referência e a gente transforma em realidade.</p>
+        <h2>Quer Algo Sob Medida?</h2>
+        <p>Tem uma ideia? A gente transforma em realidade. Envie uma referência, um modelo 3D ou descreva o que precisa — e produzimos exclusivamente para você.</p>
         <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
           <a href="contato.html" class="btn btn-secondary btn-lg"><i class="fas fa-paper-plane"></i> Solicitar Orçamento</a>
           <a href="https://wa.me/5511999999999?text=Olá! Gostaria de um orçamento para uma peça personalizada." class="btn btn-whatsapp btn-lg" target="_blank"><i class="fab fa-whatsapp"></i> Falar no WhatsApp</a>
@@ -359,7 +374,7 @@
   <section class="testimonials" id="avaliacoes">
     <div class="container">
       <h2 class="section-title fade-in">O que Nossos Clientes Dizem</h2>
-      <p class="section-subtitle fade-in">Avaliações reais de quem já comprou com a gente.</p>
+      <p class="section-subtitle fade-in">Avaliações reais de quem já recebeu nossas peças em casa.</p>
 
       <div class="testimonials-grid">
         <div class="testimonial-card stagger-item">
@@ -585,7 +600,7 @@
       </div>
 
       <div class="footer-bottom">
-        <p>&copy; 2026 3D Print Shop. Todos os direitos reservados.</p>
+        <p>&copy; 2026 3D Print Shop. Todos os direitos reservados. <a href="admin.html" class="admin-link" title="Painel Admin"><i class="fas fa-cog"></i></a></p>
       </div>
     </div>
   </footer>
