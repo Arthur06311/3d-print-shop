@@ -236,7 +236,7 @@
         '</a>' +
         '<div class="product-info">' +
           '<a href="' + prodLink + '"><h3 class="product-name">' + p.name + '</h3></a>' +
-          '<div class="product-price">R$ ' + p.price.toFixed(2).replace('.', ',') + ' <span class="product-grams">(' + Math.round(p.price / 5) + 'g)</span></div>' +
+          '<div class="product-price">R$ ' + p.price.toFixed(2).replace('.', ',') + ' <span class="product-grams">(' + Math.round(p.price / 10) + 'g)</span></div>' +
           '<button class="btn btn-primary btn-sm btn-block add-to-cart"><i class="fas fa-shopping-cart"></i> Comprar</button>' +
         '</div>' +
       '</div>';
