@@ -132,7 +132,6 @@ document.addEventListener('DOMContentLoaded', function () {
   var cartItemsContainer = document.querySelector('.cart-items');
   var cartCountElements = document.querySelectorAll('.cart-count');
   var cartTotalPrice = document.querySelector('.cart-total-price');
-  var cartWhatsAppBtn = document.querySelector('.cart-footer .btn-whatsapp');
 
   function saveCart() {
     localStorage.setItem('cart3d', JSON.stringify(cart));
@@ -212,15 +211,6 @@ document.addEventListener('DOMContentLoaded', function () {
         cartTotalPrice.textContent = 'R$ ' + total.toFixed(2).replace('.', ',');
       }
 
-      // Update WhatsApp checkout link
-      if (cartWhatsAppBtn && cart.length > 0) {
-        var msg = 'Olá! Gostaria de finalizar meu pedido:\n\n';
-        cart.forEach(function (item) {
-          msg += '• ' + item.name + ' (x' + item.qty + ') - R$ ' + (item.price * item.qty).toFixed(2).replace('.', ',') + '\n';
-        });
-        msg += '\n*Total: R$ ' + total.toFixed(2).replace('.', ',') + '*\n\nAguardo confirmação!';
-        cartWhatsAppBtn.href = 'https://wa.me/5511999999999?text=' + encodeURIComponent(msg);
-      }
     }
   }
 
